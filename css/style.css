@@ -63,6 +63,12 @@ section {
   background-color: lavenderblush;
 }
 
+.tablet {
+  background-color: silver;
+  width: 85%;
+  height: 85%;
+}
+
 /* Contact */
 .contact {
   background-color: lightcyan;
