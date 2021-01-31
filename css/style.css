@@ -1,0 +1,37 @@
+.wrap {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* home */
+.home {
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.desk {
+
+}
+
+.desk__link {
+  display: inline-block;
+  width: 100px;
+  height: 80px;
+}
+
+.desk__link-about {
+  background-color: cadetblue;
+}
+
+.desk__link-works {
+  background-color: cornflowerblue;
+}
+
+.desk__link-contact {
+  background-color: mediumpurple;
+}

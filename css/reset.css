@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /* outline: none; */
+}
+
+html,
+body {
+  margin: 0;
+  /* color: #2d2d2d; */
+  color: #141414;
+  /* font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: -0.8px; */
+  -webkit-text-size-adjust: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
+
+button {
+  background: none;
+  padding: 0;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
