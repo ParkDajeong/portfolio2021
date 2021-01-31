@@ -3,15 +3,18 @@
   height: 100vh;
 }
 
-/* home */
-.home {
-  background-color: beige;
+section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+/* Home */
+.home {
+  background-color: beige;
 }
 
 .desk {
@@ -28,10 +31,39 @@
   background-color: cadetblue;
 }
 
-.desk__link-works {
+.desk__link-work {
   background-color: cornflowerblue;
 }
 
 .desk__link-contact {
   background-color: mediumpurple;
+}
+
+/* About */
+.about {
+  background-color: lightslategray;
+}
+
+.book {
+  background-color: tan;
+  position: relative;
+  width: 85%;
+  height: 85%;
+}
+
+.book__page {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Work */
+.work {
+  background-color: lavenderblush;
+}
+
+/* Contact */
+.contact {
+  background-color: lightcyan;
 }
