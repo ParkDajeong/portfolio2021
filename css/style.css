@@ -1,5 +1,5 @@
 .wrap {
-  width: 100vw;
+  position: relative;
   height: 100vh;
 }
 
@@ -39,6 +39,44 @@ section {
   background-color: mediumpurple;
 }
 
+/* Loading */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.loading.on {
+  z-index: 10;
+}
+
+.loading__door {
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.loading__top {
+  top: -50%;
+}
+
+.loading.on .loading__top {
+  animation: slide 1s 2 alternate both;
+}
+
+.loading__bottom{
+  bottom: -50%;
+}
+
+.loading.on .loading__bottom {
+  animation: slide2 1s 2 alternate both;
+}
+
 /* About */
 .about {
   background-color: lightslategray;
@@ -72,4 +110,19 @@ section {
 /* Contact */
 .contact {
   background-color: lightcyan;
+}
+
+/* Animation */
+@keyframes slide {
+  100% {
+    top: 0;
+    height: 52%;
+  }
+}
+
+@keyframes slide2 {
+  100% {
+    bottom: 0;
+    height: 52%;
+  }
 }
