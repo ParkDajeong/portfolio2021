@@ -1,4 +1,5 @@
-/* color */
+@charset "UTF-8";
+/* =========== 애니메이션 =========== */
 @-webkit-keyframes loading {
   0% {
     -webkit-transform: rotate(-20deg) translateY(38px);
@@ -38,6 +39,7 @@
 
 /* =========== Login =========== */
 .login {
+  display: none;
   background-color: #0078d7;
   position: relative;
   width: 100%;
@@ -176,5 +178,92 @@
 
 .account__btn-login:hover {
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========== Home =========== */
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.home__background {
+  background-color: lavender;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.home__icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 500px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.home__task-bar {
+  background-color: rgba(34, 34, 34, 0.8);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 55px;
+}
+
+.home__task-bar-right {
+  margin-left: auto;
+  color: #fff;
+}
+
+.desktop-icon {
+  display: block;
+  margin: 8px;
+  text-align: center;
+  border: 1px solid transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.desktop-icon:hover, .desktop-icon:focus {
+  background-color: rgba(0, 120, 215, 0.1);
+  border: 1px solid rgba(0, 120, 215, 0.3);
+}
+
+.desktop-icon__img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 3px;
+}
+
+.desktop-icon__name {
+  color: #fff;
+  font-size: 16px;
+  text-shadow: 1px 1px 3px rgba(34, 34, 34, 0.8);
+}
+
+.btn-task {
+  width: 55px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn-task:hover, .btn-task:focus {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 /*# sourceMappingURL=index-style.css.map */
