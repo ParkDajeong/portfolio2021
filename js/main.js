@@ -1,14 +1,13 @@
 $(function() {
-  $(".desk__link").on("click", function() {
-    const section = $(this).data("section");
-    // const offset = $(`.${section}`).offset();
-    $(`.${section}`).css({"z-index": 1});
-    
-    $(".loading").addClass("on");
-    // $("html").animate({scrollTop: offset.top}, 1000);
-    
-    setTimeout(() => {
-      $(".loading").removeClass("on");
-    }, 2000);
+  // Loading
+  setTimeout(function() {
+    $(".login__loading").removeClass("on");
+    $(".login__account").addClass("on");
+  }, 5000);
+  
+  // 로그인 이벤트
+  $(".account__btn-login").on("click", function() {
+    $(".login__loading").addClass("on enter");
+    $(".login__account").removeClass("on");
   });
 });

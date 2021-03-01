@@ -1,0 +1,113 @@
+/* =========== Login =========== */
+.login {
+  background-color: $color-windows;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  &__loading,
+  &__account {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.loading {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+
+  &.on {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  &__dot {
+    background-color: $color-white;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: loading 5.8s cubic-bezier(0.1, 0.5, 0.9, 0.5) reverse infinite both;
+
+    $delay: 0.15;
+    @for $i from 1 to 7 {
+      $second: $i * $delay;
+
+      &:nth-child(#{$i + 1}) {
+        animation-delay: #{$second}s;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 18px;
+    color: $color-white;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__text--welcome {
+    display: none;
+  }
+
+  &.enter {
+    .loading__text--load {
+      display: none;
+    }
+
+    .loading__text--welcome {
+      display: block;
+    }
+  }
+}
+
+.account {
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+
+  &.on {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__avatar {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__name {
+    display: block;
+    margin: 18px 0;
+    color: $color-white;
+    font-size: 34px;
+  }
+
+  &__btn-login {
+    background-color: rgba($color-white, 0.7);
+    padding: 7px 30px;
+    font-size: 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba($color-white, 0.9);
+    }
+  }
+}

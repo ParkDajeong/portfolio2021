@@ -44,12 +44,24 @@
   height: 100vh;
 }
 
-.login__loading {
+.login__loading, .login__account {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.loading {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.loading.on {
+  opacity: 1;
+  visibility: visible;
 }
 
 .loading__dots {
@@ -111,5 +123,58 @@
   color: #fff;
   font-size: 24px;
   text-align: center;
+}
+
+.loading__text--welcome {
+  display: none;
+}
+
+.loading.enter .loading__text--load {
+  display: none;
+}
+
+.loading.enter .loading__text--welcome {
+  display: block;
+}
+
+.account {
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.account.on {
+  opacity: 1;
+  visibility: visible;
+}
+
+.account__avatar {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.account__name {
+  display: block;
+  margin: 18px 0;
+  color: #fff;
+  font-size: 34px;
+}
+
+.account__btn-login {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 7px 30px;
+  font-size: 15px;
+  border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.account__btn-login:hover {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 /*# sourceMappingURL=index-style.css.map */
