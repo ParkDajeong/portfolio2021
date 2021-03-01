@@ -1,0 +1,14 @@
+@keyframes loading {
+  0% {
+    transform: rotate(-20deg) translateY(38px);
+  }
+  35% {
+    transform: rotate(360deg) translateY(38px);
+  }
+  70% {
+    transform: rotate(720deg) translateY(38px);
+  }
+  100% {
+    transform: rotate(1060deg) translateY(38px);
+  }
+}

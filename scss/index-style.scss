@@ -1,0 +1,54 @@
+@import "abstract/variable";
+
+@import "base/animation";
+
+/* =========== Login =========== */
+.login {
+  background-color: $color-windows;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  &__loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.loading {
+  &__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  &__dot {
+    background-color: $color-white;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: loading 5.8s cubic-bezier(0.1, 0.5, 0.9, 0.5) reverse infinite both;
+
+    $delay: 0.15;
+    @for $i from 1 to 7 {
+      $second: $i * $delay;
+
+      &:nth-child(#{$i + 1}) {
+        animation-delay: #{$second}s;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 18px;
+    color: $color-white;
+    font-size: 24px;
+    text-align: center;
+  }
+}
