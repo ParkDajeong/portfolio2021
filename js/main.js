@@ -22,7 +22,7 @@ $(function() {
   setTimeout(function() {
     $(".login__loading").removeClass("on");
     $(".login__account").addClass("on");
-  }, 4000);
+  }, 3500);
   
   // Login Event
   $(".account__btn-login").on("click", function() {
@@ -42,4 +42,12 @@ $(function() {
     $(".clock").text(getTimeText(hour, min));
   }, 1000);
 
+  // Modal - About
+  $(".desktop-icon").on("click", function() {
+    $(".modal-about").fadeIn(300);
+  });
+  
+  $(".modal .btn-back").on("click", function() {
+    $(".modal-about").fadeOut(300);
+  });
 });
