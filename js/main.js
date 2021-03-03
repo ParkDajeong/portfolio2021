@@ -42,12 +42,17 @@ $(function() {
     $(".clock").text(getTimeText(hour, min));
   }, 1000);
 
-  // Modal - About
+  // Modal
   $(".desktop-icon").on("click", function() {
     $(".modal-about").fadeIn(300);
   });
   
   $(".modal .btn-back").on("click", function() {
     $(".modal-about").fadeOut(300);
+  });
+
+  $(".modal__link-menu").on("click", function() {
+    $(".modal__side-menu-item").removeClass("active");
+    $(this).parent().addClass("active");
   });
 });
