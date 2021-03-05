@@ -17,6 +17,19 @@ function getTimeText(hour, min) {
   return str;
 }
 
+function getModalSectionPosition(section) {
+  return $(section).position().top + $(".modal__contents").scrollTop();
+}
+
+function checkVisible(elm) {
+  const modalHeight = $(".modal__contents").height();
+  const scrollTop = $(".modal__contents").scrollTop();
+  const sectionPos = getModalSectionPosition(elm);
+  const sectionHeight = $(elm).height();
+
+  return sectionPos < (modalHeight + scrollTop) && sectionPos > (scrollTop - sectionHeight);
+}
+
 $(function() {
   // Loading
   setTimeout(function() {
@@ -42,17 +55,31 @@ $(function() {
     $(".clock").text(getTimeText(hour, min));
   }, 1000);
 
-  // Modal
+  // Open Modal
   $(".desktop-icon").on("click", function() {
     $(".modal-about").fadeIn(300);
   });
   
+  // Close Modal
   $(".modal .btn-back").on("click", function() {
     $(".modal-about").fadeOut(300);
   });
 
-  $(".modal__link-menu").on("click", function() {
-    $(".modal__side-menu-item").removeClass("active");
-    $(this).parent().addClass("active");
+  // Modal Side Menu Click Event
+  $(".modal__side-menu-item").on("click", function() {
+    const section = $(this).data("section");
+    const position = getModalSectionPosition(section);
+    
+    $(".modal__contents").animate({scrollTop: position}, 500);
+  });
+
+  // Modal Scroll Event
+  $(".modal__contents").on("scroll resize", function() {
+    $(".modal__content-section").each(function(idx, item) {
+      if(checkVisible($(item))) {
+        $(".modal__side-menu-item").removeClass("active");
+        $(".modal__side-menu-item").eq(idx).addClass("active");
+      }
+    });
   });
 });
