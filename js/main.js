@@ -18,17 +18,30 @@ function getTimeText(hour, min) {
 }
 
 function getModalSectionPosition(section) {
-  return $(section).position().top + $(".modal__contents").scrollTop();
+  return $(section).position().top + $(".modal.on .modal__contents").scrollTop();
 }
 
 function checkVisible(elm) {
-  const modalHeight = $(".modal__contents").height();
-  const scrollTop = $(".modal__contents").scrollTop();
+  const modalHeight = $(".modal.on .modal__contents").height();
+  const scrollTop = $(".modal.on .modal__contents").scrollTop();
   const sectionPos = getModalSectionPosition(elm);
   const sectionHeight = $(elm).height();
-
+  
   return sectionPos < (modalHeight + scrollTop) && sectionPos > (scrollTop - sectionHeight);
 }
+
+// let lastScrollTop = 0;
+// const delta = 50;
+// function isScrolledDown() {
+//   const scrollTop = $(".modal.on .modal__contents").scrollTop();
+
+//   if(Math.abs(lastScrollTop - scrollTop) <= delta) return null;
+
+//   const isDown = scrollTop > lastScrollTop ? true : false;
+//   lastScrollTop = scrollTop;
+
+//   return isDown;
+// }
 
 $(function() {
   // Loading
@@ -57,29 +70,53 @@ $(function() {
 
   // Open Modal
   $(".desktop-icon").on("click", function() {
-    $(".modal-about").fadeIn(300);
+    const modal = $(this).data("modal");
+    $(`.${modal}`).fadeIn(300);
+    $(`.${modal}`).addClass("on");
   });
   
   // Close Modal
   $(".modal .btn-back").on("click", function() {
-    $(".modal-about").fadeOut(300);
+    $(".modal").fadeOut(300);
+    $(".modal").removeClass("on");
   });
 
   // Modal Side Menu Click Event
   $(".modal__side-menu-item").on("click", function() {
     const section = $(this).data("section");
     const position = getModalSectionPosition(section);
-    
-    $(".modal__contents").animate({scrollTop: position}, 500);
+
+    $(".modal.on .modal__contents").animate({scrollTop: position}, 500);
   });
 
   // Modal Scroll Event
-  $(".modal__contents").on("scroll resize", function() {
-    $(".modal__content-section").each(function(idx, item) {
+  $(".modal__contents").on("scroll", function() {
+    $(".modal.on .modal__content-section").each(function(idx, item) {
       if(checkVisible($(item))) {
-        $(".modal__side-menu-item").removeClass("active");
-        $(".modal__side-menu-item").eq(idx).addClass("active");
+        $(".modal.on .modal__side-menu-item").removeClass("active");
+        $(".modal.on .modal__side-menu-item").eq(idx).addClass("active");
       }
     });
+  });
+
+  // Modal Project Top
+let lastScrollTop = 0;
+const delta = 50;
+const maxShrink = 100;
+$(".modal-project .modal__contents").on("scroll", function() {
+  const scrollTop = $(this).scrollTop();
+  const elmHeight = $(".modal-project__top").height();
+
+  console.log(elmHeight);
+  
+  if(Math.abs(lastScrollTop - scrollTop) <= delta) return;
+  
+  if(elmHeight < 450 && scrollTop < lastScrollTop) {
+    $(".modal-project__top").css("max-height", `${elmHeight + 50}px`);
+  }
+  if(elmHeight > 100 && scrollTop > lastScrollTop) {
+    $(".modal-project__top").css("max-height", `${elmHeight - 50}px`);
+  } 
+  lastScrollTop = scrollTop;
   });
 });

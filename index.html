@@ -4,13 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>박다정의 포트폴리오</title>
+  <!-- jQuery -->
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- Slick Slide -->
+  <link rel="stylesheet" href="./css/slick/slick.css">
+  <script src="./js/slick/slick.min.js"></script>
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/d0b8e988b1.js" crossorigin="anonymous"></script>
   <!-- Custom CSS & JS -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/index-style.css">
-  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/slide.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -18,35 +23,35 @@
     <section class="home">
       <div class="home__background">
         <div class="home__icons">
-          <a href="#" class="desktop-icon">
+          <a href="#" class="desktop-icon" data-modal="modal-about">
             <img src="./assets/notes.png" class="desktop-icon__img" alt="">
             <span class="desktop-icon__name">About</span>
           </a>
-          <a href="#" class="desktop-icon">
+          <a href="#" class="desktop-icon" data-modal="modal-project">
             <img src="./assets/Folder - Lemon.png" class="desktop-icon__img" alt="">
             <span class="desktop-icon__name">Project</span>
           </a>
-          <a href="#" class="desktop-icon">
+          <a href="#" class="desktop-icon" data-modal="modal-about">
             <img src="./assets/contacts2.png" class="desktop-icon__img" alt="">
             <span class="desktop-icon__name">Contact</span>
           </a>
-          <a href="#" class="desktop-icon">
+          <a href="#" class="desktop-icon" data-modal="modal-about">
             <img src="./assets/vs code.png" class="desktop-icon__img" alt="">
             <span class="desktop-icon__name">VS Code</span>
           </a>
-          <a href="#" class="desktop-icon">
+          <a href="#" class="desktop-icon" data-modal="modal-about">
             <img src="./assets/music02.png" class="desktop-icon__img" alt="">
             <span class="desktop-icon__name">Music</span>
           </a>
-          <a href="#" class="desktop-icon">
+          <a href="#" class="desktop-icon" data-modal="modal-about">
             <img src="./assets/instagram.png" class="desktop-icon__img" alt="">
             <span class="desktop-icon__name">SNS</span>
           </a>
-          <a href="#" class="desktop-icon">
+          <a href="#" class="desktop-icon" data-modal="modal-about">
             <img src="./assets/safari.png" class="desktop-icon__img" alt="">
             <span class="desktop-icon__name">Browser</span>
           </a>
-          <a href="#" class="desktop-icon">
+          <a href="#" class="desktop-icon" data-modal="modal-about">
             <img src="./assets/img_avatar2.png" class="desktop-icon__img" alt="">
             <span class="desktop-icon__name">Information</span>
           </a>
@@ -75,26 +80,74 @@
         </div>
         <div class="modal__side">
           <ul class="modal__side-menu">
-            <li class="modal__side-menu-item active" data-section="#section1">
+            <li class="modal__side-menu-item active" data-section="#about1">
               사용자 정보
             </li>
-            <li class="modal__side-menu-item" data-section="#section2">
+            <li class="modal__side-menu-item" data-section="#about2">
               타임라인
             </li>
-            <li class="modal__side-menu-item" data-section="#section3">
+            <li class="modal__side-menu-item" data-section="#about3">
               스킬
             </li>
           </ul>
         </div>
         <div class="modal__contents">
-          <section id="section1" class="modal__content-section">
-            <h3>사용자 정보</h3>
+          <section id="about1" class="modal__content-section">
+            <h3 class="modal-about__section-title">사용자 정보</h3>
           </section>
-          <section id="section2" class="modal__content-section">
-            <h3>타임라인</h3>
+          <section id="about2" class="modal__content-section">
+            <h3 class="modal-about__section-title">타임라인</h3>
           </section>
-          <section id="section3" class="modal__content-section">
-            <h3>스킬</h3>
+          <section id="about3" class="modal__content-section">
+            <h3 class="modal-about__section-title">스킬</h3>
+          </section>
+        </div>
+      </div>
+    </article>
+    <!-- Modal - Project -->
+    <article class="modal modal-project">
+      <div class="modal__inner">
+        <div class="modal__top">
+          <button class="btn-back">
+            <i class="fas fa-arrow-left"></i>
+            <span class="blind">모달창 닫기</span>
+          </button>
+          <h2 class="modal__title">Project</h2>
+        </div>
+        <div class="modal__side">
+          <ul class="modal__side-menu">
+            <li class="modal__side-menu-item active" data-section="#project1">
+              프로젝트 01
+            </li>
+            <li class="modal__side-menu-item" data-section="#project2">
+              프로젝트 02
+            </li>
+            <li class="modal__side-menu-item" data-section="#project3">
+              프로젝트 03
+            </li>
+          </ul>
+        </div>
+        <div class="modal__contents">
+          <section id="project1" class="modal__content-section">
+            <div class="modal-project__top">
+              <ul class="slide modal-project__slide">
+                <li class="slide__item">
+                  <img src="./assets/test/project01.jpg" class="slide__img" alt="">
+                </li>
+                <li class="slide__item">
+                  <img src="./assets/test/project02.jpg" class="slide__img" alt="">
+                </li>
+                <li class="slide__item">
+                  <img src="./assets/test/project03.jpg" class="slide__img" alt="">
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="project2" class="modal__content-section">
+            <h3>프로젝트 02</h3>
+          </section>
+          <section id="project3" class="modal__content-section">
+            <h3>프로젝트 03</h3>
           </section>
         </div>
       </div>
