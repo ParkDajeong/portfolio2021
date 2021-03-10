@@ -2,41 +2,32 @@
 /* =========== 애니메이션 =========== */
 @-webkit-keyframes loading {
   0% {
-    -webkit-transform: rotate(-20deg) translateY(38px);
-            transform: rotate(-20deg) translateY(38px);
+    transform: rotate(-20deg) translateY(38px);
   }
   35% {
-    -webkit-transform: rotate(360deg) translateY(38px);
-            transform: rotate(360deg) translateY(38px);
+    transform: rotate(360deg) translateY(38px);
   }
   70% {
-    -webkit-transform: rotate(720deg) translateY(38px);
-            transform: rotate(720deg) translateY(38px);
+    transform: rotate(720deg) translateY(38px);
   }
   100% {
-    -webkit-transform: rotate(1060deg) translateY(38px);
-            transform: rotate(1060deg) translateY(38px);
+    transform: rotate(1060deg) translateY(38px);
   }
 }
 @keyframes loading {
   0% {
-    -webkit-transform: rotate(-20deg) translateY(38px);
-            transform: rotate(-20deg) translateY(38px);
+    transform: rotate(-20deg) translateY(38px);
   }
   35% {
-    -webkit-transform: rotate(360deg) translateY(38px);
-            transform: rotate(360deg) translateY(38px);
+    transform: rotate(360deg) translateY(38px);
   }
   70% {
-    -webkit-transform: rotate(720deg) translateY(38px);
-            transform: rotate(720deg) translateY(38px);
+    transform: rotate(720deg) translateY(38px);
   }
   100% {
-    -webkit-transform: rotate(1060deg) translateY(38px);
-            transform: rotate(1060deg) translateY(38px);
+    transform: rotate(1060deg) translateY(38px);
   }
 }
-
 /* =========== Login =========== */
 .login {
   display: none;
@@ -48,50 +39,36 @@
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 .login.on {
   opacity: 1;
   visibility: visible;
 }
-
 .login__loading, .login__account {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .loading {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 .loading.on {
   opacity: 1;
   visibility: visible;
 }
-
 .loading__dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 100px;
   margin: 0 auto;
 }
-
 .loading__dot {
   background-color: #fff;
   position: absolute;
@@ -100,52 +77,42 @@
   border-radius: 50%;
   animation: loading 5.8s cubic-bezier(0.1, 0.5, 0.9, 0.5) reverse infinite both;
 }
-
 .loading__dot:nth-child(2) {
   -webkit-animation-delay: 0.15s;
           animation-delay: 0.15s;
 }
-
 .loading__dot:nth-child(3) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-
 .loading__dot:nth-child(4) {
   -webkit-animation-delay: 0.45s;
           animation-delay: 0.45s;
 }
-
 .loading__dot:nth-child(5) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
-
 .loading__dot:nth-child(6) {
   -webkit-animation-delay: 0.75s;
           animation-delay: 0.75s;
 }
-
 .loading__dot:nth-child(7) {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
-
 .loading__text {
   margin-top: 18px;
   color: #fff;
   font-size: 24px;
   text-align: center;
 }
-
 .loading__text--welcome {
   display: none;
 }
-
 .loading.enter .loading__text--load {
   display: none;
 }
-
 .loading.enter .loading__text--welcome {
   display: block;
 }
@@ -154,15 +121,12 @@
   text-align: center;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 .account.on {
   opacity: 1;
   visibility: visible;
 }
-
 .account__avatar {
   width: 220px;
   height: 220px;
@@ -170,23 +134,19 @@
   border-radius: 50%;
   overflow: hidden;
 }
-
 .account__name {
   display: block;
   margin: 18px 0;
   color: #fff;
   font-size: 34px;
 }
-
 .account__btn-login {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 7px 30px;
   font-size: 15px;
   border-radius: 20px;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .account__btn-login:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -199,56 +159,39 @@
   width: 100%;
   height: 100%;
 }
-
 .home__background {
   background-color: lavender;
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .home__icons {
   position: absolute;
   top: 50%;
   left: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 500px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 550px;
+  transform: translate(-50%, -50%);
 }
-
 .home__task-bar {
   background-color: rgba(34, 34, 34, 0.8);
   position: absolute;
   left: 0;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 55px;
 }
-
 .home__task-bar-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 100%;
   padding: 0 15px;
   margin-left: auto;
   color: #fff;
 }
-
 .home__task-bar-right .clock {
   font-size: 15px;
   cursor: default;
@@ -256,24 +199,22 @@
 
 .desktop-icon {
   display: block;
-  margin: 8px;
+  margin: 4px 8px;
+  padding: 5px;
   text-align: center;
   border: 1px solid transparent;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .desktop-icon:hover, .desktop-icon:focus {
   background-color: rgba(0, 120, 215, 0.1);
   border: 1px solid rgba(0, 120, 215, 0.3);
 }
-
 .desktop-icon__img {
+  display: block;
   width: 100px;
   height: 100px;
   margin-bottom: 3px;
 }
-
 .desktop-icon__name {
   color: #fff;
   font-size: 16px;
@@ -285,10 +226,8 @@
   height: 100%;
   color: #fff;
   font-size: 18px;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .btn-task:hover, .btn-task:focus {
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -302,76 +241,58 @@
   width: 100%;
   height: 100%;
 }
-
 .modal__inner {
   position: fixed;
   top: 47%;
   left: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 70%;
   height: 70%;
   border-radius: 5px;
-  -webkit-box-shadow: 0 25px 60px 5px rgba(34, 34, 34, 0.06);
-          box-shadow: 0 25px 60px 5px rgba(34, 34, 34, 0.06);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  box-shadow: 0 25px 60px 5px rgba(34, 34, 34, 0.06);
+  transform: translate(-50%, -50%);
 }
-
 .modal__top {
   position: absolute;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 35px;
   line-height: 35px;
 }
-
 .modal__top .btn-back {
   width: 50px;
   height: 100%;
   font-size: 16px;
 }
-
 .modal__top .btn-back:hover {
   background-color: rgba(34, 34, 34, 0.07);
 }
-
 .modal__title {
   font-size: 15px;
   font-weight: normal;
   margin-left: 8px;
 }
-
 .modal__side {
   background-color: rgba(255, 255, 255, 0.5);
   max-width: 280px;
   width: 100%;
   height: 100%;
 }
-
 .modal__side-menu {
   margin-top: 80px;
 }
-
 .modal__side-menu-item {
   position: relative;
   padding: 10px 0 10px 40px;
   font-size: 16px;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-
 .modal__side-menu-item:hover {
   background-color: rgba(34, 34, 34, 0.07);
 }
-
 .modal__side-menu-item::before {
   content: "";
   background-color: transparent;
@@ -380,27 +301,20 @@
   left: 0;
   width: 4px;
   height: 70%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: 0.2s;
+  transform: translateY(-50%);
   transition: 0.2s;
 }
-
 .modal__side-menu-item.active::before {
   background-color: midnightblue;
 }
-
 .modal__contents {
   background-color: #fff;
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
 }
-
 .modal__content-section {
   border: 2px solid #000;
   width: 100%;
@@ -411,7 +325,6 @@
 .modal-about .modal__content-section {
   padding: 35px;
 }
-
 .modal-about__section-title {
   font-size: 24px;
 }
@@ -420,15 +333,12 @@
 .modal-project {
   display: block;
 }
-
 .modal-project .modal__content-section:first-child {
   height: 300%;
 }
-
 .modal-project .modal__contents {
   position: relative;
 }
-
 .modal-project__top {
   position: -webkit-sticky;
   position: sticky;
@@ -438,25 +348,21 @@
   max-height: 450px;
   height: 100%;
 }
-
 .modal-project .slide {
   position: relative;
   width: 100%;
   height: 100%;
   /* slick custom dots */
 }
-
 .modal-project .slide .slick-list,
 .modal-project .slide .slick-track {
   height: 100%;
 }
-
 .modal-project .slide__item {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .modal-project .slide__img {
   position: absolute;
   top: 50%;
@@ -465,16 +371,13 @@
   bottom: 0;
   width: 100%;
   height: auto;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .modal-project .slide .slick-dots {
   position: absolute;
   right: 5px;
   bottom: 0;
 }
-
 .modal-project .slide .slick-dots li {
   background-color: rgba(255, 255, 255, 0.5);
   display: inline-block;
@@ -484,12 +387,9 @@
   text-indent: -9999px;
   border-radius: 50%;
   cursor: pointer;
-  -webkit-box-shadow: 0px 1px 8px rgba(34, 34, 34, 0.1);
-          box-shadow: 0px 1px 8px rgba(34, 34, 34, 0.1);
-  -webkit-transition: 0.3s;
+  box-shadow: 0px 1px 8px rgba(34, 34, 34, 0.1);
   transition: 0.3s;
 }
-
 .modal-project .slide .slick-dots li.slick-active {
   background-color: #fff;
 }
@@ -508,5 +408,4 @@
   color: transparent;
   text-indent: -9999px;
   overflow: hidden;
-}
-/*# sourceMappingURL=index-style.css.map */
+}/*# sourceMappingURL=index-style.css.map */
