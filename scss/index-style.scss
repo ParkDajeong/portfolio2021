@@ -1,4 +1,5 @@
 @import "abstract/variable";
+@import "abstract/mixin";
 
 @import "base/animation";
 
@@ -7,6 +8,8 @@
 @import "layout/modal";
 @import "layout/modal-about";
 @import "layout/modal-project";
+@import "layout/modal-contact";
+@import "layout/modal-info";
 
 .wrap {
   position: relative;

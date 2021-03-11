@@ -99,24 +99,24 @@ $(function() {
     });
   });
 
-  // Modal Project Top
-let lastScrollTop = 0;
-const delta = 50;
-const maxShrink = 100;
-$(".modal-project .modal__contents").on("scroll", function() {
-  const scrollTop = $(this).scrollTop();
-  const elmHeight = $(".modal-project__top").height();
-
-  console.log(elmHeight);
-  
-  if(Math.abs(lastScrollTop - scrollTop) <= delta) return;
-  
-  if(elmHeight < 450 && scrollTop < lastScrollTop) {
-    $(".modal-project__top").css("max-height", `${elmHeight + 50}px`);
-  }
-  if(elmHeight > 100 && scrollTop > lastScrollTop) {
-    $(".modal-project__top").css("max-height", `${elmHeight - 50}px`);
-  } 
-  lastScrollTop = scrollTop;
+// Modal Project - Top
+  let lastScrollTop = 0;
+  const delta = 50;
+  const initialHeight = $(".modal-project__top").height();
+  const maxShrink = 100;
+  $(".modal-project .modal__contents").on("scroll", function() {
+    const scrollTop = $(this).scrollTop();
+    const elmHeight = $(".modal-project__top").height();
+    
+    if(Math.abs(lastScrollTop - scrollTop) <= delta) return;
+    
+    if(elmHeight < initialHeight && scrollTop < lastScrollTop) { // Scroll Up
+      if(scrollTop < 500) {
+        $(".modal-project__top").css("max-height", `${elmHeight + 50}px`);
+      }
+    }else if(elmHeight > maxShrink && scrollTop > lastScrollTop) { // Scroll Down
+      $(".modal-project__top").css("max-height", `${elmHeight - 50}px`);
+    }
+    lastScrollTop = scrollTop;
   });
 });
