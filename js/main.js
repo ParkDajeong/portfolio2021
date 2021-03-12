@@ -89,6 +89,11 @@ $(function() {
     $(".modal.on .modal__contents").animate({scrollTop: position}, 500);
   });
 
+  // Modal Slide Menu Toggle Button
+  $(".modal__btn-toggle-side").on("click", function() {
+    $(this).parent().toggleClass("on");
+  });
+
   // Modal Scroll Event
   $(".modal__contents").on("scroll", function() {
     $(".modal.on .modal__content-section").each(function(idx, item) {
