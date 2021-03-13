@@ -59,6 +59,11 @@ $(function() {
     }, 2300);
   });
 
+  // Task Menu
+  $(".btn-task").on("click", function() {
+    $(this).toggleClass("on");
+  });
+
   // Clock
   setInterval(function() {
     const today = new Date();
@@ -89,9 +94,19 @@ $(function() {
     $(".modal.on .modal__contents").animate({scrollTop: position}, 500);
   });
 
-  // Modal Slide Menu Toggle Button
+  // Modal Side Menu Toggle Button
   $(".modal__btn-toggle-side").on("click", function() {
     $(this).parent().toggleClass("on");
+  });
+
+  // Modal Side Menu
+  $(window).on("resize load", function() {
+    const viewport = $(this).width();
+    if(viewport < 1024) {
+      $(".modal__side").addClass("on");
+    } else {
+      $(".modal__side").removeClass("on");
+    }
   });
 
   // Modal Scroll Event
