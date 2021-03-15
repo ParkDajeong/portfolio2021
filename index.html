@@ -96,9 +96,6 @@
             <li class="modal__side-menu-item active" data-section="#about1">
               사용자 정보
             </li>
-            <li class="modal__side-menu-item" data-section="#about2">
-              타임라인
-            </li>
             <li class="modal__side-menu-item" data-section="#about3">
               스킬
             </li>
@@ -108,13 +105,63 @@
           </button>
         </div>
         <div class="modal__contents">
-          <section id="about1" class="modal__content-section">
+          <section id="about1" class="profile modal__content-section">
             <h3 class="modal-about__section-title">사용자 정보</h3>
+            <div class="profile__top">
+              <div class="profile__img-area">
+                <div class="profile__photo">
+                  <img src="./assets/img_avatar2.png" class="profile__img" alt="박다정 프로필">
+                </div>
+                <div class="profile__img-list">
+                  <button class="profile__btn-change-img">
+                    <img src="./assets/contacts3.png" class="profile__img" alt="">
+                  </button>
+                  <button class="profile__btn-change-img">
+                    <img src="./assets/contacts3.png" class="profile__img" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="profile__text-area">
+                <strong class="profile__name">박다정</strong>
+                <ul class="profile__hashtag-box">
+                  <li class="profile__hashtag">웹표준</li>
+                  <li class="profile__hashtag">웹접근성</li>
+                  <li class="profile__hashtag">반응형</li>
+                  <li class="profile__hashtag">반응형</li>
+                  <li class="profile__hashtag">반응형</li>
+                </ul>
+              </div>
+            </div>
+            <div class="profile__bottom">
+              <dl class="profile__info">
+                <dt class="profile__info-title">강점</dt>
+                <dd class="profile__info-desc">
+                  새로운 것을 배우는 걸 좋아하고, 또 배운 것을 곧잘 활용합니다.
+                </dd>
+                <dd class="profile__info-desc">
+                  더 깔끔하고 나은 방법이 없는지를 항상 고민하고, 그것을 적용하기 위해 노력합니다.
+                </dd>
+                <dt class="profile__info-title">목표/자기계발</dt>
+                <dd class="profile__info-desc">
+                  최근 인터랙티브한 웹사이트를 구현하는 것에 관심이 많아 꾸준히 공부 중입니다.
+                </dd>
+                <dd class="profile__info-desc">
+                  프론트엔드쪽에도 관심이 많아 JavaScript 라이브러리/프레임워크도 틈틈이 공부하려 노력하고 있습니다.
+                </dd>
+                <dd class="profile__info-desc">
+                  디자인 관련 얘기.....
+                </dd>
+                <dt class="profile__info-title">TMI</dt>
+                <dd class="profile__info-desc">
+                  TMI 어쩌꾸 저꾸거~~
+                </dd>
+                <dd class="profile__info-desc">
+                  TMI 두번째 어쩌구저쩌구 하하하
+                </dd>
+              </dl>
+            </div>
           </section>
-          <section id="about2" class="modal__content-section">
-            <h3 class="modal-about__section-title">타임라인</h3>
-          </section>
-          <section id="about3" class="modal__content-section">
+          <section id="about3" class="skill modal__content-section">
             <h3 class="modal-about__section-title">스킬</h3>
           </section>
         </div>

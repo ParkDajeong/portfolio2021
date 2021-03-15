@@ -124,17 +124,24 @@ $(function() {
   const delta = 50;
   const initialHeight = $(".modal-project__top").height();
   const maxShrink = 100;
+  
   $(".modal-project .modal__contents").on("scroll", function() {
     const scrollTop = $(this).scrollTop();
     const elmHeight = $(".modal-project__top").height();
     
     if(Math.abs(lastScrollTop - scrollTop) <= delta) return;
-    
-    if(elmHeight < initialHeight && scrollTop < lastScrollTop) { // Scroll Up
+  
+    console.log("elmHeight", elmHeight);
+    console.log("initailHeight", initialHeight);
+    // Scroll Up
+    if(elmHeight < initialHeight && scrollTop < lastScrollTop) {
+      console.log("111111111", scrollTop);
       if(scrollTop < 500) {
         $(".modal-project__top").css("max-height", `${elmHeight + 50}px`);
       }
-    }else if(elmHeight > maxShrink && scrollTop > lastScrollTop) { // Scroll Down
+    }
+    // Scroll Down
+    if(elmHeight > maxShrink && scrollTop > lastScrollTop) {
       $(".modal-project__top").css("max-height", `${elmHeight - 50}px`);
     }
     lastScrollTop = scrollTop;

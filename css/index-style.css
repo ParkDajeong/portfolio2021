@@ -451,17 +451,73 @@
 }
 .modal__content-section {
   width: 100%;
-  height: 100%;
 }
 
 /* =========== Modal - About =========== */
+.modal-about {
+  display: block;
+}
 .modal-about .modal__content-section {
   padding: 35px;
 }
 .modal-about__section-title {
-  font-size: 24px;
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
+.profile__top {
+  margin: 8px 0 35px;
+}
+.profile__img-area {
+  display: flex;
+  margin-bottom: 12px;
+}
+.profile__photo {
+  width: 220px;
+  height: 220px;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile__img {
+  width: 100%;
+  height: 100%;
+}
+.profile__img-list {
+  margin-top: auto;
+}
+.profile__btn-change-img {
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin-bottom: 10px;
+}
+.profile__name {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 3px;
+}
+.profile__hashtag-box {
+  display: flex;
+}
+.profile__hashtag {
+  margin-right: 8px;
+}
+.profile__hashtag::before {
+  content: "#";
+}
+.profile__info {
+  line-height: 1.8;
+}
+.profile__info-title {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.profile__info-title::before {
+  content: "📂";
+  margin-right: 3px;
+}
 /* =========== Modal - Project =========== */
 .modal-project .modal__content-section:first-child {
   height: 300%;
@@ -475,8 +531,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  max-height: 450px;
-  height: 100%;
+  height: 450px;
 }
 .modal-project .slide {
   position: relative;
