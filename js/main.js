@@ -120,30 +120,23 @@ $(function() {
   });
 
 // Modal Project - Top
-  let lastScrollTop = 0;
-  const delta = 50;
   const initialHeight = $(".modal-project__top").height();
   const maxShrink = 100;
   
   $(".modal-project .modal__contents").on("scroll", function() {
     const scrollTop = $(this).scrollTop();
-    const elmHeight = $(".modal-project__top").height();
-    
-    if(Math.abs(lastScrollTop - scrollTop) <= delta) return;
-  
-    console.log("elmHeight", elmHeight);
-    console.log("initailHeight", initialHeight);
-    // Scroll Up
-    if(elmHeight < initialHeight && scrollTop < lastScrollTop) {
-      console.log("111111111", scrollTop);
-      if(scrollTop < 500) {
-        $(".modal-project__top").css("max-height", `${elmHeight + 50}px`);
-      }
+    let maxHeight;
+
+    if(scrollTop < 100) {
+      maxHeight = 450;
+    } else if(scrollTop > 400) {
+      maxHeight = 100;
+    } else {
+      maxHeight = initialHeight - maxShrink * ((scrollTop - 100) / 100);
     }
-    // Scroll Down
-    if(elmHeight > maxShrink && scrollTop > lastScrollTop) {
-      $(".modal-project__top").css("max-height", `${elmHeight - 50}px`);
-    }
-    lastScrollTop = scrollTop;
+
+    $(".modal-project__top").css({
+      "max-height":  `${maxHeight}px`
+    });
   });
 });

@@ -454,9 +454,6 @@
 }
 
 /* =========== Modal - About =========== */
-.modal-about {
-  display: block;
-}
 .modal-about .modal__content-section {
   padding: 35px;
 }
@@ -519,6 +516,9 @@
   margin-right: 3px;
 }
 /* =========== Modal - Project =========== */
+.modal-project {
+  display: block;
+}
 .modal-project .modal__content-section:first-child {
   height: 300%;
 }
