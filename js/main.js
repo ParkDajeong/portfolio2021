@@ -127,16 +127,24 @@ $(function() {
     const scrollTop = $(this).scrollTop();
     let maxHeight;
 
-    if(scrollTop < 100) {
+    if(scrollTop < 50) {
       maxHeight = 450;
     } else if(scrollTop > 400) {
       maxHeight = 100;
     } else {
-      maxHeight = initialHeight - maxShrink * ((scrollTop - 100) / 100);
+      maxHeight = initialHeight - maxShrink * ((scrollTop - 50) / 100);
     }
 
-    $(".modal-project__top").css({
-      "max-height":  `${maxHeight}px`
-    });
+    $(".modal-project__top").css("max-height", `${maxHeight}px`);
+    $(".modal-project__contents").css("top", `${maxHeight}px`);
+
+    console.log(scrollTop);
+    
+    if(scrollTop > 400) {
+      $(".modal-project__contents").css("position", "absolute");
+      $(".modal-project__contents").css("top", `500px`);
+    } else {
+      $(".modal-project__contents").css("position", "sticky");
+    }
   });
 });
