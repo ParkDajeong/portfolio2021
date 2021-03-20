@@ -119,6 +119,35 @@ $(function() {
     });
   });
 
+  // Modal About - Profile Photo
+  const path = "../assets/";
+  const imgArr = ["img_avatar2.png", "contacts3.png", "instagram.png"];
+  $(".profile__btn-change-img").on("click", function() {
+    const currentImg = imgArr[0];
+    const changeImg = $(this).data("img");
+
+    if($(this).hasClass("js-btn-change-img02")) {
+      $(".profile__photo img").attr("src", path + changeImg);
+      $(this).data("img", currentImg);
+      $(this).find(".profile__img").attr("src", path + currentImg);
+
+      imgArr[0] = changeImg;
+      imgArr[2] = currentImg;
+      
+      return;
+    }
+
+    imgArr[0] = changeImg;
+    imgArr[1] = imgArr[2];
+    imgArr[2] = currentImg;
+    
+    $(".profile__photo img").attr("src", path + imgArr[0]);
+    $(".js-btn-change-img01").data("img", imgArr[1]);
+    $(".js-btn-change-img01 img").attr("src", path + imgArr[1]);
+    $(".js-btn-change-img02").data("img", imgArr[2]);
+    $(".js-btn-change-img02 img").attr("src", path + imgArr[2]);
+  });
+
   // Modal About - accordion
   $(".profile__info-title").on("click", function() {
     $(this).toggleClass("on");

@@ -538,7 +538,7 @@
   width: 220px;
   height: 220px;
   margin-right: 20px;
-  border-radius: 50%;
+  border-radius: 25%;
   overflow: hidden;
 }
 .profile__img {
