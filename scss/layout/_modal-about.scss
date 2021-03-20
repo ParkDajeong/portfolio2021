@@ -32,6 +32,39 @@
     margin-right: 20px;
     border-radius: 50%;
     overflow: hidden;
+
+    .test {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: rotate(0deg);
+      transform-origin: bottom;
+      transition: 1s;
+    }
+
+    .profile__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: bottom;
+      border-radius: 50%;
+
+      &:last-child {
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+    }
+
+    &.change {
+      .test {
+        transform: rotate(-90deg);
+      }
+
+      .profile__img {
+        opacity: 1;
+        transition: opacity 1s 0.3s;
+      }
+    }
   }
 
   &__img {
