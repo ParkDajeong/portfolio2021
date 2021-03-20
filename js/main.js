@@ -119,7 +119,12 @@ $(function() {
     });
   });
 
-// Modal Project - Top
+  // Modal About - accordion
+  $(".profile__info-title").on("click", function() {
+    $(this).toggleClass("on");
+  });
+
+  // Modal Project - Top
   const initialHeight = $(".modal-project__top").height();
   const maxShrink = 100;
   
@@ -136,15 +141,16 @@ $(function() {
     }
 
     $(".modal-project__top").css("max-height", `${maxHeight}px`);
-    $(".modal-project__contents").css("top", `${maxHeight}px`);
+    // $(".modal-project__contents").css("top", `${maxHeight}px`);
+    $(".modal-project__contents").css("top", `${scrollTop}px`);
 
     console.log(scrollTop);
     
     if(scrollTop > 400) {
-      $(".modal-project__contents").css("position", "absolute");
-      $(".modal-project__contents").css("top", `500px`);
+      // $(".modal-project__contents").css("position", "absolute");
+      $(".modal-project__contents").css("top", `400px`);
     } else {
-      $(".modal-project__contents").css("position", "sticky");
+      // $(".modal-project__contents").css("position", "sticky");
     }
   });
 });

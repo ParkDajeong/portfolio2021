@@ -1,6 +1,7 @@
 @import "abstract/variable";
 @import "abstract/mixin";
 
+@import "base/font";
 @import "base/animation";
 
 @import "layout/login";
@@ -10,6 +11,11 @@
 @import "layout/modal-project";
 @import "layout/modal-contact";
 @import "layout/modal-info";
+
+html,
+body {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
 
 .wrap {
   position: relative;

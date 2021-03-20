@@ -1,12 +1,18 @@
 /* =========== Modal - About =========== */
 .modal-about {
+  display: block;
+
+  .modal__contents {
+    z-index: -1;
+  }
+
   .modal__content-section {
     padding: 35px;
   }
 
   &__section-title {
-    font-size: 28px;
     margin-bottom: 15px;
+    font-size: 28px;
   }
 }
 
@@ -46,8 +52,9 @@
 
   &__name {
     display: block;
-    font-size: 24px;
     margin-bottom: 3px;
+    font-size: 24px;
+    font-weight: 500;
   }
 
   &__hashtag-box {
@@ -67,16 +74,80 @@
 
     &-title {
       margin-top: 8px;
-      font-size: 15px;
-      font-weight: bold;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: default;
 
       &::before {
-        content: "📂";
-        margin-right: 3px;
+        content: "\f105";
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        margin-right: 7px;
+        font-family: fontawesome;
+        color: #444;
+        transition: 0.5s;
+        animation: arrow-ani 1s ease-in infinite alternate;
+      }
+
+      &.on {
+        &::before {
+          top: -1px;
+          left: -2px;
+          transform: rotate(90deg);
+          animation: none;
+        }
+
+        .highlight {
+          &::after {
+            width: 110%;
+            height: 80%;
+          }
+        }
+      }
+
+      .highlight {
+        // background-color: turquoise;
+        position: relative;
+
+        &::after {
+          content: "";
+          background: transparent;
+          background-image: linear-gradient(to right, rgba(255, 225, 0, 0.1), rgba(255, 225, 0, 0.7) 4%, rgba(255, 225, 0, 0.3));
+          border-radius: 10px 5px;
+          // box-decoration-break: clone;
+          position: absolute;
+          left: -5px;
+          bottom: 0;
+          width: 0;
+          height: 30%;
+          z-index: -1;
+          transition: 0.5s ease-out;
+        }
+
+        &:hover {
+          &::after {
+            width: 110%;
+          }
+        }
       }
     }
 
+    &-wrap {
+      max-height: 1px;
+      height: 100%;
+      padding-left: 18px;
+      overflow: hidden;
+      transition: 0.8s;
+    }
+
+    &-title.on + &-wrap {
+      max-height: 100px;
+    }
+
     &-desc {
+      font-size: 15px;
     }
   }
 }
