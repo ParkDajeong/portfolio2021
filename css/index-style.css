@@ -70,6 +70,22 @@
     left: 3px;
   }
 }
+@-webkit-keyframes shining {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+@keyframes shining {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
 /* =========== Login =========== */
 .login {
   display: none;
@@ -606,11 +622,27 @@
   width: 110%;
 }
 .profile__info-wrap {
+  position: relative;
   max-height: 1px;
   height: 100%;
   padding-left: 18px;
   overflow: hidden;
   transition: 0.8s;
+}
+.profile__info-wrap::before {
+  content: "";
+  background: linear-gradient(to bottom, #bbb, #f8f8ff, #bbb) no-repeat;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  position: absolute;
+  top: 7px;
+  left: 4px;
+  width: 3px;
+  height: 78%;
+  border-radius: 100px;
+  overflow: hidden;
+  -webkit-animation: shining 3s linear infinite alternate;
+          animation: shining 3s linear infinite alternate;
 }
 .profile__info-title.on + .profile__info-wrap {
   max-height: 100px;
