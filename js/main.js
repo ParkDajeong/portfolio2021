@@ -126,19 +126,10 @@ $(function() {
     const currentImg = imgArr[0];
     const changeImg = $(this).data("img");
 
-    if($(this).hasClass("js-btn-change-img02")) {
-      $(".profile__photo img").attr("src", path + changeImg);
-      $(this).data("img", currentImg);
-      $(this).find(".profile__img").attr("src", path + currentImg);
-
-      imgArr[0] = changeImg;
-      imgArr[2] = currentImg;
-      
-      return;
-    }
-
     imgArr[0] = changeImg;
-    imgArr[1] = imgArr[2];
+    if($(this).hasClass("js-btn-change-img01")) {
+      imgArr[1] = imgArr[2];
+    }
     imgArr[2] = currentImg;
     
     $(".profile__photo img").attr("src", path + imgArr[0]);
