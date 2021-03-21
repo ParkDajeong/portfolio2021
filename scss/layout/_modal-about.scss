@@ -11,8 +11,10 @@
   }
 
   &__section-title {
-    margin-bottom: 15px;
-    font-size: 28px;
+    margin-bottom: 18px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -1px;
   }
 }
 
@@ -54,20 +56,14 @@
   &__name {
     display: block;
     margin-bottom: 3px;
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 500;
+    letter-spacing: -0.8px;
   }
 
-  &__hashtag-box {
-    display: flex;
-  }
-
-  &__hashtag {
-    margin-right: 8px;
-
-    &::before {
-      content: "#";
-    }
+  &__intro-text {
+    color: #464646;
+    padding-left: 5px;
   }
 
   &__info {
@@ -169,10 +165,6 @@
 }
 
 .skill {
-  .modal-about__section-title {
-    margin-bottom: 18px;
-  }
-
   &__wrapper {
     width: 99%;
     margin: 0 auto;
