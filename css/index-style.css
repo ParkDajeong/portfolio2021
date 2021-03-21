@@ -381,7 +381,7 @@
   display: flex;
   flex-wrap: wrap;
   min-width: 1100px;
-  width: 70%;
+  width: 60%;
   height: 70%;
   border-radius: 5px;
   box-shadow: 0 25px 60px 5px rgba(34, 34, 34, 0.06);
@@ -553,6 +553,7 @@
   width: 65px;
   height: 65px;
   margin-bottom: 10px;
+  outline: none;
 }
 .profile__name {
   display: block;
@@ -649,6 +650,91 @@
 }
 .profile__info-desc {
   font-size: 15px;
+}
+
+.skill .modal-about__section-title {
+  margin-bottom: 18px;
+}
+.skill__wrapper {
+  width: 99%;
+  margin: 0 auto;
+}
+.skill .skill-bar:nth-child(1) .skill-bar__subject {
+  background-color: #d35400;
+}
+.skill .skill-bar:nth-child(1) .skill-bar__bar {
+  background-color: #e67e22;
+}
+.skill .skill-bar:nth-child(2) .skill-bar__subject {
+  background-color: #2980b9;
+}
+.skill .skill-bar:nth-child(2) .skill-bar__bar {
+  background-color: #3498db;
+}
+.skill .skill-bar:nth-child(3) .skill-bar__subject {
+  background-color: #fac552;
+}
+.skill .skill-bar:nth-child(3) .skill-bar__bar {
+  background-color: #fac552;
+}
+.skill .skill-bar:nth-child(4) .skill-bar__subject {
+  background-color: #2c3e50;
+}
+.skill .skill-bar:nth-child(4) .skill-bar__bar {
+  background-color: #3d4c5c;
+}
+.skill .skill-bar:nth-child(5) .skill-bar__subject {
+  background-color: #2bc2ec;
+}
+.skill .skill-bar:nth-child(5) .skill-bar__bar {
+  background-color: #61dafb;
+}
+.skill .skill-bar:nth-child(6) .skill-bar__subject {
+  background-color: #168fe6;
+}
+.skill .skill-bar:nth-child(6) .skill-bar__bar {
+  background-color: #31a8ff;
+}
+
+.skill-bar {
+  background-color: #eee;
+  position: relative;
+  width: 100%;
+  height: 32px;
+  margin-bottom: 18px;
+  border-radius: 25px;
+}
+.skill-bar__subject {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100%;
+  color: #f8f8ff;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 25px 0 0 25px;
+  overflow: hidden;
+}
+.skill-bar__subject span {
+  background-color: rgba(34, 34, 34, 0.1);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-top: -1px;
+  padding-left: 23px;
+}
+.skill-bar__bar {
+  width: 0;
+  height: 100%;
+  border-radius: 25px;
+  transition: width 1.8s linear;
+}
+.skill-bar__percent {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 11px;
 }
 
 /* =========== Modal - Project =========== */

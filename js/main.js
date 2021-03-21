@@ -30,19 +30,6 @@ function checkVisible(elm) {
   return sectionPos < (modalHeight + scrollTop) && sectionPos > (scrollTop - sectionHeight);
 }
 
-// let lastScrollTop = 0;
-// const delta = 50;
-// function isScrolledDown() {
-//   const scrollTop = $(".modal.on .modal__contents").scrollTop();
-
-//   if(Math.abs(lastScrollTop - scrollTop) <= delta) return null;
-
-//   const isDown = scrollTop > lastScrollTop ? true : false;
-//   lastScrollTop = scrollTop;
-
-//   return isDown;
-// }
-
 $(function() {
   // Loading
   setTimeout(function() {
@@ -142,6 +129,13 @@ $(function() {
   // Modal About - accordion
   $(".profile__info-title").on("click", function() {
     $(this).toggleClass("on");
+  });
+
+  // Modal About - Skill bar
+  $(".skill-bar").each(function(_idx, item) {
+    const percent = $(item).data("percent");
+    $(item).find(".skill-bar__bar").css("width", percent);
+    $(item).find(".skill-bar__percent").text(percent);
   });
 
   // Modal Project - Top
