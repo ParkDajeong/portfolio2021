@@ -24,7 +24,8 @@ function getModalSectionPosition(section) {
 function checkVisible(elm) {
   const modalHeight = $(".modal.on .modal__contents").height();
   const scrollTop = $(".modal.on .modal__contents").scrollTop();
-  const sectionPos = getModalSectionPosition(elm);
+  let sectionPos = getModalSectionPosition(elm);
+  sectionPos = sectionPos + sectionPos / 3;
   const sectionHeight = $(elm).height();
   
   return sectionPos < (modalHeight + scrollTop) && sectionPos > (scrollTop - sectionHeight);
@@ -131,11 +132,15 @@ $(function() {
     $(this).toggleClass("on");
   });
 
-  // Modal About - Skill bar
-  $(".skill-bar").each(function(_idx, item) {
-    const percent = $(item).data("percent");
-    $(item).find(".skill-bar__bar").css("width", percent);
-    $(item).find(".skill-bar__percent").text(percent);
+  // Modal About - Skill
+  $(".modal-about .modal__contents").on("scroll", function() {
+    if(checkVisible($(".modal-about .skill"))) {
+      $(".skill-bar").each(function(_idx, item) {
+        const percent = $(item).data("percent");
+        $(item).find(".skill-bar__bar").css("width", percent);
+        $(item).find(".skill-bar__percent").text(percent);
+      });
+    }
   });
 
   // Modal Project - Top
