@@ -2,108 +2,189 @@
 .modal-project {
   display: block;
 
-  .test {
-    height: 1px;
-  }
-
-  // 테스트용
-  .modal__content-section:not(:first-child) {
-    height: 200%;
-  }
-
-  &__top {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 450px;
-    z-index: 100;
-  }
-
-  &__slide {
-    .slick-track {
-      filter: blur(1.5px) brightness(90%);
-    }
-  }
-
-  &__heading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    color: $color-white;
-    text-shadow: 2px 2px 5px rgba($color-black, 0.3);
-    text-align: center;
-    transform: translate(-50%, -50%);
-  }
-
-  &__title {
-    font-size: 40px;
-    margin-bottom: 3px;
-  }
-
-  &__sub-text {
-    font-size: 16px;
-  }
-
-  &__contents {
-    background-color: aliceblue;
-    // position: sticky;
-    top: 0;
-    position: relative;
-    top: 0;
-    width: 100%;
-    font-size: 20px;
+  .modal__inner {
+    display: block;
   }
 }
 
-.slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.browser {
+  background-color: $color-white;
 
-  .slick-list,
-  .slick-track {
-    height: 100%;
+  &__bar {
+    background-color: antiquewhite;
+    box-shadow: 1px 1px 2px rgba($color-black, 0.08);
   }
 
-  &__item {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  &__tab-bar {
+    background-color: #dee1e6;
+    display: flex;
+    height: 35px;
+    padding-left: 8px;
   }
 
-  &__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    transform: translate(-50%, -50%);
+  &__tabs {
+    display: flex;
+    flex: 1;
   }
 
-  /* slick custom dots */
-  .slick-dots {
-    position: absolute;
-    right: 5px;
-    bottom: 0;
+  &__tab {
+    min-width: 250px;
+    padding: 0 8px 0 12px;
+    border-radius: 8px 8px 0 0;
 
-    li {
-      background-color: rgba($color-white, 0.5);
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      margin: 0 3px;
-      text-indent: -9999px;
-      border-radius: 50%;
-      cursor: pointer;
+    &-content {
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+
+    &-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+
+    &-title {
+      margin-right: 4px;
+      color: #5f6368;
+      font-size: 12px;
+      letter-spacing: normal;
+      white-space: nowrap;
+    }
+
+    &.active {
+      background-color: #fff;
+
+      .browser__tab-title {
+        color: #3c4043;
+      }
+    }
+  }
+
+  &__window-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__window-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 29px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba($color-black, 0.1);
+    }
+
+    img {
       transition: 0.3s;
     }
 
-    li.slick-active {
-      background-color: $color-white;
+    &.close {
+      &:hover {
+        background-color: #e81123;
+
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+
+  &__main-bar {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 6px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: default;
+
+    &:hover {
+      background-color: rgba($color-black, 0.1);
+    }
+  }
+
+  &__address-bar {
+    background-color: #f1f3f4;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 28px;
+    margin: 0 8px 0 6px;
+    border-radius: 20px;
+
+    .bookmark {
+      margin: 0 2px 0 auto;
+      padding: 0 10px;
+      min-width: 32px;
+    }
+  }
+
+  &__contents {
+    &-name {
+      display: flex;
+      align-items: center;
+      color: $color-white;
+      font-size: 20px;
+    }
+
+    &-search {
+      background-color: rgba($color-black, 0.3);
+      width: 380px;
+      height: 35px;
+      margin: 0 auto;
+      border: none;
+      border-radius: 3px;
+      outline: none;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 1px 2px rgba($color-black, 0.1);
+
+    &-top {
+      background-color: #4285f4;
+      display: flex;
+      align-items: center;
+      height: 56px;
+      padding: 0 24px;
+    }
+
+    &-bottom {
+      .modal__title {
+        background-color: $color-white;
+        display: flex;
+        align-items: center;
+        height: 34px;
+        margin: 0;
+        font-size: 14px;
+
+        &::before {
+          content: "↳";
+          display: inline-block;
+          margin: 0 8px 0 30px;
+        }
+
+        i {
+          font-style: normal;
+          margin-right: 5px;
+        }
+      }
     }
   }
 }
