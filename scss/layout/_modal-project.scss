@@ -125,7 +125,7 @@
     margin: 0 8px 0 6px;
     border-radius: 20px;
 
-    .bookmark {
+    .btn-bookmark {
       margin: 0 2px 0 auto;
       padding: 0 10px;
       min-width: 32px;
@@ -184,6 +184,192 @@
           font-style: normal;
           margin-right: 5px;
         }
+      }
+    }
+  }
+
+  &__main {
+  }
+}
+
+/* Bookmark - Grid 형식(default) */
+.bookmark {
+  // border: 1px solid $color-black;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 30px auto;
+
+  &__card {
+    background-color: $color-white;
+    flex: 1;
+    max-width: 33.3333%;
+    height: 300px;
+    margin: 0 4px;
+    border: 1px solid #e9e9eb;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.25s;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      box-shadow: 3px 4px 8px rgba($color-black, 0.08);
+
+      .bookmark__overlay {
+        opacity: 1;
+      }
+
+      .bookmark__btn-star {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__thumbnail {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: -9999px;
+      bottom: -9999px;
+      right: -9999px;
+      left: -9999px;
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  &__overlay {
+    background-color: rgba($color-black, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $color-white;
+    opacity: 0;
+    z-index: 100;
+    transition: opacity 0.3s;
+  }
+
+  &__link-detail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 7px 22px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba($color-white, 0.4);
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #4285f4;
+      border-color: transparent;
+    }
+  }
+
+  &__info-box {
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding-left: 28px;
+    border-top: 1px solid #e9e9eb;
+  }
+
+  &__name {
+    margin-top: -5px;
+    font-size: 16px;
+  }
+
+  &__desc {
+    margin-top: 2px;
+    color: #8c96a9;
+    font-size: 13px;
+  }
+
+  &__btn-star {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.25s;
+  }
+
+  /* Bookmark - List 형식 */
+  &--list {
+    width: 80%;
+    flex-direction: column;
+
+    .bookmark__card {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .bookmark__thumbnail {
+      display: none;
+    }
+
+    .bookmark__info-box {
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+      height: auto;
+      padding: 8px 25px;
+    }
+
+    .bookmark__name {
+      margin-top: 0;
+      font-size: 15px;
+    }
+
+    .bookmark__desc {
+      margin-left: 13px;
+
+      &::before {
+        content: "::";
+        display: inline-block;
+        margin-right: 5px;
+        letter-spacing: 1.1px;
+      }
+    }
+
+    .bookmark__btn-star {
+      display: none;
+    }
+
+    &__link-detail {
+      margin-left: auto;
+      padding: 6px;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: rgba(34, 34, 34, 0.1);
       }
     }
   }
