@@ -743,9 +743,6 @@
 }
 
 /* =========== Modal - Project =========== */
-.modal-project {
-  display: block;
-}
 .modal-project .modal__inner {
   display: block;
 }
@@ -1055,8 +1052,69 @@
   background-color: rgba(34, 34, 34, 0.1);
 }
 
-.modal-contact .modal__content-section {
+.modal-contact {
+  display: block;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
   padding-top: 35px;
+}
+.contact__left {
+  background-color: mediumaquamarine;
+  width: 450px;
+  height: 98%;
+  padding: 40px;
+  border-radius: 0 25px 25px 0;
+}
+.contact__text-area {
+  margin-top: 10px;
+}
+.contact__main-text {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: -1.5px;
+}
+.contact__list {
+  position: absolute;
+  top: 42%;
+  left: 40px;
+}
+.contact__list-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+.contact__icon {
+  margin-right: 10px;
+}
+.contact__text {
+  font-size: 18px;
+}
+.contact__right {
+  flex: 1;
+  height: 100%;
+}
+.contact__email-form {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.email-form__input {
+  background-color: #f8f8ff;
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.email-form__message {
+  height: 200px;
 }
 
 .modal-info .modal__content-section {

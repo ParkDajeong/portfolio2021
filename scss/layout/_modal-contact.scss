@@ -1,7 +1,80 @@
 .modal-contact {
-  // display: block;
+  display: block;
+}
 
-  .modal__content-section {
-    padding-top: 35px;
+.contact {
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+
+  &__left {
+    background-color: mediumaquamarine;
+    width: 450px;
+    height: 98%;
+    padding: 40px;
+    border-radius: 0 25px 25px 0;
+  }
+
+  &__text-area {
+    margin-top: 10px;
+  }
+
+  &__main-text {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+  }
+
+  &__sub-text {
+    // color: #ccc;
+  }
+
+  &__list {
+    position: absolute;
+    top: 42%;
+    left: 40px;
+
+    &-item {
+      display: flex;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+
+  &__right {
+    flex: 1;
+    height: 100%;
+  }
+
+  &__email-form {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.email-form {
+  &__input {
+    background-color: $color-white;
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__message {
+    height: 200px;
   }
 }
