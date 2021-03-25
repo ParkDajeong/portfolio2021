@@ -23,7 +23,6 @@
     display: block;
     margin-bottom: 8px;
     font-size: 28px;
-    text-transform: uppercase;
     letter-spacing: -1.5px;
   }
 
@@ -38,12 +37,14 @@
 
     &-item {
       display: flex;
+      align-items: center;
       margin-bottom: 20px;
     }
   }
 
   &__icon {
     margin-right: 10px;
+    // font-size: 20px;
   }
 
   &__text {
@@ -51,30 +52,51 @@
   }
 
   &__right {
+    position: relative;
     flex: 1;
     height: 100%;
   }
 
   &__email-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 85%;
-    margin: 0 auto;
+    transform: translate(-50%, -50%);
   }
 }
 
 .email-form {
+  label {
+    font-size: 15px;
+  }
+
   &__input {
-    background-color: $color-white;
+    background-color: #edf0f9;
     display: block;
     width: 100%;
-    padding: 8px 10px;
+    padding: 13px 20px;
     margin-bottom: 10px;
     font-size: 15px;
     outline: none;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-radius: 50px;
   }
 
   &__message {
     height: 200px;
+    padding: 18px 20px;
+    border-radius: 30px;
+  }
+
+  &__btn-send {
+    background-color: cadetblue;
+    display: block;
+    padding: 13px;
+    margin-top: 20px;
+    margin-left: auto;
+    width: 180px;
+    font-size: 16px;
+    border-radius: 100px;
   }
 }

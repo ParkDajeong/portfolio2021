@@ -1075,7 +1075,6 @@
   display: block;
   margin-bottom: 8px;
   font-size: 28px;
-  text-transform: uppercase;
   letter-spacing: -1.5px;
 }
 .contact__list {
@@ -1085,6 +1084,7 @@
 }
 .contact__list-item {
   display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 .contact__icon {
@@ -1094,27 +1094,46 @@
   font-size: 18px;
 }
 .contact__right {
+  position: relative;
   flex: 1;
   height: 100%;
 }
 .contact__email-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 85%;
-  margin: 0 auto;
+  transform: translate(-50%, -50%);
 }
 
+.email-form label {
+  font-size: 15px;
+}
 .email-form__input {
-  background-color: #f8f8ff;
+  background-color: #edf0f9;
   display: block;
   width: 100%;
-  padding: 8px 10px;
+  padding: 13px 20px;
   margin-bottom: 10px;
   font-size: 15px;
   outline: none;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-radius: 50px;
 }
 .email-form__message {
   height: 200px;
+  padding: 18px 20px;
+  border-radius: 30px;
+}
+.email-form__btn-send {
+  background-color: cadetblue;
+  display: block;
+  padding: 13px;
+  margin-top: 20px;
+  margin-left: auto;
+  width: 180px;
+  font-size: 16px;
+  border-radius: 100px;
 }
 
 .modal-info .modal__content-section {

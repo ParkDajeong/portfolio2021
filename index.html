@@ -300,7 +300,7 @@
         <div class="contact modal__contents">
           <div class="contact__left">
             <div class="contact__text-area">
-              <strong class="contact__main-text">call me!</strong>
+              <strong class="contact__main-text">Let's Talk!</strong>
               <p class="contact__sub-text">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur accusantium aut voluptas tempore corrupti libero?
               </p>
@@ -333,11 +333,14 @@
             </dl>
           </div>
           <div class="contact__right">
-            <p>SEND MAIL</p>
             <form action="" class="email-form contact__email-form">
-              <input type="text" name="name" class="email-form__input" placeholder="보낸 사람">
-              <input type="text" name="email" class="email-form__input" placeholder="메일 주소">
-              <textarea name="message" class="email-form__input email-form__message" placeholder="메세지 내용을 입력해주세요:)"></textarea>
+              <label for="name">보내는 사람</label>
+              <input type="text" name="name" id="name" class="email-form__input">
+              <label for="email">이메일 주소</label>
+              <input type="text" name="email" id="email" class="email-form__input">
+              <label for="email">메세지</label>
+              <textarea name="message" id="message" class="email-form__input email-form__message" placeholder="내용을 입력해주세요:)"></textarea>
+              <button class="email-form__btn-send">메세지 전송</button>
             </form>
           </div>
         </div>
