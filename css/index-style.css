@@ -924,16 +924,36 @@
   height: 56px;
   padding: 0 24px;
 }
-.browser__main-inner {
-  border: 1px solid #000;
-  max-width: 1000px;
-  margin: 30px auto;
+.browser__header-top .browser__button {
+  margin-left: auto;
+  cursor: pointer;
 }
-.browser__current-folder {
-  padding: 10px 0;
+.browser__header-top .browser__button:hover {
+  background-color: transparent;
+}
+.browser__header-top .browser__button svg {
+  width: 15px;
+  height: 15px;
+  fill: #f8f8ff;
+}
+
+/* Bookmark - Grid 형식(default) */
+.bookmark {
+  /* Bookmark - List 형식 */
+}
+.bookmark__inner {
+  max-width: 1000px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.bookmark__current-folder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
   border-bottom: 1px solid #000;
 }
-.browser__current-folder .modal__title {
+.bookmark__current-folder .modal__title {
   background-color: #f8f8ff;
   display: flex;
   align-items: center;
@@ -941,43 +961,51 @@
   margin: 0;
   font-size: 14px;
 }
-.browser__current-folder .modal__title::before {
-  content: "↳";
+.bookmark__current-folder .modal__title::before {
+  content: ">";
   display: inline-block;
-  margin: 0 8px 0 30px;
+  margin-right: 8px;
 }
-.browser__current-folder .modal__title i {
+.bookmark__current-folder .modal__title i {
   font-style: normal;
   margin-right: 5px;
 }
-
-/* Bookmark - Grid 형식(default) */
-.bookmark {
+.bookmark__btn-sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  padding: 5px 0;
+  margin-top: 3px;
+  font-size: 17px;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+.bookmark__btn-sort:hover {
+  opacity: 0.8;
+}
+.bookmark__btn-sort--grid {
+  margin-left: 15px;
+}
+.bookmark__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 20px 0;
-  /* Bookmark - List 형식 */
+  padding: 0 5px;
 }
 .bookmark__card {
   background-color: #f8f8ff;
-  flex: 1;
-  max-width: 33.3333%;
-  height: 300px;
-  margin: 0 4px;
-  border: 1px solid #e9e9eb;
+  width: 32%;
   border-radius: 5px;
+  box-shadow: 0 0 3px rgba(34, 34, 34, 0.3);
   overflow: hidden;
   cursor: pointer;
   transition: 0.25s;
 }
-.bookmark__card:first-child {
-  margin-left: 0;
-}
-.bookmark__card:last-child {
-  margin-right: 0;
-}
 .bookmark__card:hover {
-  box-shadow: 3px 4px 8px rgba(34, 34, 34, 0.08);
+  box-shadow: 2px 4px 7px rgba(34, 34, 34, 0.1);
+  transform: translateY(-5px);
 }
 .bookmark__card:hover .bookmark__overlay {
   opacity: 1;
@@ -1037,7 +1065,7 @@
   flex-direction: column;
   justify-content: center;
   height: 100px;
-  padding-left: 28px;
+  padding-left: 25px;
   border-top: 1px solid #e9e9eb;
 }
 .bookmark__name {
@@ -1052,17 +1080,18 @@
 .bookmark__btn-star {
   position: absolute;
   top: 50%;
-  right: 25px;
+  right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #ccc;
-  border-radius: 50%;
+  color: #4285f4;
+  font-size: 18px;
   opacity: 0;
   transform: translateY(-50%);
   transition: opacity 0.25s;
+}
+.bookmark__btn-star:hover {
+  color: #3973cf;
 }
 .bookmark--list__link-detail {
   display: none;
