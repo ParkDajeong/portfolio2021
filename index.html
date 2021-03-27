@@ -216,7 +216,7 @@
                 <div class="browser__tab-content">
                   <img src="./assets/bookmark.png" class="browser__tab-icon" alt="">
                   <span class="browser__tab-title">북마크</span>
-                  <button class="browser__tab-btn-close">
+                  <button class="browser__tab-btn-close btn-back">
                     <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 16 16">
                       <path d="M16,1.6L14.4,0L8,6.4L1.6,0L0,1.6L6.4,8L0,14.4L1.6,16L8,9.6l6.4,6.4l1.6-1.6L9.6,8L16,1.6z"></path>
                    </svg>
@@ -231,7 +231,7 @@
               <div class="browser__window-btn windowed">
                 <img src="./assets/windows-window.png" alt="">
               </div>
-              <div class="browser__window-btn close">
+              <div class="browser__window-btn close btn-back">
                 <img src="./assets/windows-close.png" alt="">
               </div>
             </div>
@@ -297,18 +297,19 @@
                   <span>Projects</span>
                 </h2>
                 <div class="bookmark__sort">
+                  <button class="bookmark__btn-sort bookmark__btn-sort--grid on">
+                    <i class="fas fa-th-large"></i>
+                    <span class="blind">갤러리 형식으로 보기</span>
+                  </button>
                   <button class="bookmark__btn-sort bookmark__btn-sort--list">
                     <i class="fas fa-bars"></i>
                     <span class="blind">리스트 형식으로 보기</span>
-                  </button>
-                  <button class="bookmark__btn-sort bookmark__btn-sort--grid">
-                    <i class="fas fa-th-large"></i>
-                    <span class="blind">갤러리 형식으로 보기</span>
                   </button>
                 </div>
               </div>
               <ul class="bookmark__list">
                 <li class="bookmark__card">
+                  <a href="#" class="bookmark__link-project"></a>
                   <!-- <i class="bookmark__icon"></i> -->
                   <div class="bookmark__thumbnail">
                     <img src="./assets/test/7.png" alt="">
@@ -322,65 +323,8 @@
                     <span class="bookmark__btn-star">
                       <i class="fas fa-star"></i>
                     </span>
-                    <a href="#" class="bookmark--list__link-detail" title="상세 내용 보기(노션 이동)">
-                      <span>💜</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="bookmark__card">
-                  <!-- <i class="bookmark__icon"></i> -->
-                  <div class="bookmark__thumbnail">
-                    <img src="./assets/test/7.png" alt="">
-                    <div class="bookmark__overlay">
-                      <a href="#" class="bookmark__link-detail">view detail</a>
-                    </div>
-                  </div>
-                  <div class="bookmark__info-box">
-                    <h4 class="bookmark__name">프로젝트 이름 01</h4>
-                    <p class="bookmark__desc">프로젝트에 대한 간단한 한 줄 설명을 작성한다.</p>
-                    <span class="bookmark__btn-star">
-                      <i class="fas fa-star"></i>
-                    </span>
-                    <a href="#" class="bookmark--list__link-detail" title="상세 내용 보기(노션 이동)">
-                      <span>💜</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="bookmark__card">
-                  <!-- <i class="bookmark__icon"></i> -->
-                  <div class="bookmark__thumbnail">
-                    <img src="./assets/test/7.png" alt="">
-                    <div class="bookmark__overlay">
-                      <a href="#" class="bookmark__link-detail">view detail</a>
-                    </div>
-                  </div>
-                  <div class="bookmark__info-box">
-                    <h4 class="bookmark__name">프로젝트 이름 01</h4>
-                    <p class="bookmark__desc">프로젝트에 대한 간단한 한 줄 설명을 작성한다.</p>
-                    <span class="bookmark__btn-star">
-                      <i class="fas fa-star"></i>
-                    </span>
-                    <a href="#" class="bookmark--list__link-detail" title="상세 내용 보기(노션 이동)">
-                      <span>💜</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="bookmark__card">
-                  <!-- <i class="bookmark__icon"></i> -->
-                  <div class="bookmark__thumbnail">
-                    <img src="./assets/test/7.png" alt="">
-                    <div class="bookmark__overlay">
-                      <a href="#" class="bookmark__link-detail">view detail</a>
-                    </div>
-                  </div>
-                  <div class="bookmark__info-box">
-                    <h4 class="bookmark__name">프로젝트 이름 01</h4>
-                    <p class="bookmark__desc">프로젝트에 대한 간단한 한 줄 설명을 작성한다.</p>
-                    <span class="bookmark__btn-star">
-                      <i class="fas fa-star"></i>
-                    </span>
-                    <a href="#" class="bookmark--list__link-detail" title="상세 내용 보기(노션 이동)">
-                      <span>💜</span>
+                    <a href="#" class="bookmark__link-detail--list" title="상세 내용 보기(노션 이동)">
+                      <i class="far fa-question-circle"></i>
                     </a>
                   </div>
                 </li>

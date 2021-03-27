@@ -144,32 +144,25 @@ $(function() {
   });
 
   // Modal Project - Top
-  const initialHeight = $(".modal-project__top").height();
-  const maxShrink = 100;
-  
-  $(".modal-project .modal__contents").on("scroll", function() {
+  $(".modal-project .browser__contents").on("scroll", function() {
     const scrollTop = $(this).scrollTop();
-    let maxHeight;
 
-    if(scrollTop < 50) {
-      maxHeight = 450;
-    } else if(scrollTop > 400) {
-      maxHeight = 100;
+    if(scrollTop > 50) {
+      $(".bookmark__current-folder").addClass("fixed");
     } else {
-      maxHeight = initialHeight - maxShrink * ((scrollTop - 50) / 100);
+      $(".bookmark__current-folder").removeClass("fixed");
     }
+  });
 
-    $(".modal-project__top").css("max-height", `${maxHeight}px`);
-    // $(".modal-project__contents").css("top", `${maxHeight}px`);
-    $(".modal-project__contents").css("top", `${scrollTop}px`);
+  // Modal Project - bookmark sort
+  $(".modal-project .bookmark__btn-sort").on("click", function() {
+    $(this).addClass("on");
+    $(this).siblings().removeClass("on");
 
-    console.log(scrollTop);
-    
-    if(scrollTop > 400) {
-      // $(".modal-project__contents").css("position", "absolute");
-      $(".modal-project__contents").css("top", `400px`);
+    if($(this).hasClass("bookmark__btn-sort--list")) {
+      $(".bookmark").addClass("bookmark--list");
     } else {
-      // $(".modal-project__contents").css("position", "sticky");
+      $(".bookmark").removeClass("bookmark--list");
     }
   });
 });
