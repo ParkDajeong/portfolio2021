@@ -1,6 +1,6 @@
 /* =========== Modal - Project =========== */
 .modal-project {
-  // display: block;
+  display: block;
 
   .modal__inner {
     display: block;
@@ -39,8 +39,9 @@
     }
 
     &-icon {
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
+      margin-top: 1px;
       margin-right: 8px;
     }
 
@@ -50,6 +51,17 @@
       font-size: 12px;
       letter-spacing: normal;
       white-space: nowrap;
+    }
+
+    &-btn-close {
+      min-width: 16px;
+      height: 16px;
+      margin-left: auto;
+      border-radius: 50px;
+
+      &:hover {
+        background-color: rgba($color-black, 0.1);
+      }
     }
 
     &.active {
@@ -72,7 +84,6 @@
     align-items: center;
     width: 45px;
     height: 29px;
-    cursor: pointer;
     transition: 0.3s;
 
     &:hover {
@@ -84,6 +95,8 @@
     }
 
     &.close {
+      cursor: pointer;
+
       &:hover {
         background-color: #e81123;
 
@@ -110,9 +123,26 @@
     height: 28px;
     border-radius: 50%;
     cursor: default;
-
+    transition: background-color 0.25s;
+    
     &:hover {
       background-color: rgba($color-black, 0.1);
+    }
+    
+    svg {
+      width: 13px;
+      height: 13px;
+      fill: #5F6368;
+    }
+
+    &.disabled {
+      &:hover {
+        background-color: transparent;
+      }
+
+      svg {
+        fill: #BABCBE;
+      }
     }
   }
 
@@ -129,6 +159,30 @@
       margin: 0 2px 0 auto;
       padding: 0 10px;
       min-width: 32px;
+    }
+  }
+
+  &__address-info {
+    min-width: 32px;
+    padding: 0 10px;
+    margin-left: 3px;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: #5F6368;
+    }
+  }
+
+  &__address {
+    margin-top: -1px;
+    
+    &-protocol {
+      color: #5F6368;
+    }
+
+    &-domain {
+      color: #202124;
     }
   }
 
@@ -164,41 +218,47 @@
       height: 56px;
       padding: 0 24px;
     }
-
-    &-bottom {
-      .modal__title {
-        background-color: $color-white;
-        display: flex;
-        align-items: center;
-        height: 34px;
-        margin: 0;
-        font-size: 14px;
-
-        &::before {
-          content: "↳";
-          display: inline-block;
-          margin: 0 8px 0 30px;
-        }
-
-        i {
-          font-style: normal;
-          margin-right: 5px;
-        }
-      }
-    }
   }
 
   &__main {
+    &-inner {
+      border: 1px solid #000;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+  }
+
+  &__current-folder {
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+
+    .modal__title {
+      background-color: $color-white;
+      display: flex;
+      align-items: center;
+      height: 34px;
+      margin: 0;
+      font-size: 14px;
+
+      &::before {
+        content: "↳";
+        display: inline-block;
+        margin: 0 8px 0 30px;
+      }
+
+      i {
+        font-style: normal;
+        margin-right: 5px;
+      }
+    }
   }
 }
 
 /* Bookmark - Grid 형식(default) */
 .bookmark {
-  // border: 1px solid $color-black;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 30px auto;
+  margin: 20px 0;
 
   &__card {
     background-color: $color-white;
@@ -319,6 +379,10 @@
     opacity: 0;
     transform: translateY(-50%);
     transition: opacity 0.25s;
+  }
+
+  &--list__link-detail {
+    display: none;
   }
 
   /* Bookmark - List 형식 */
