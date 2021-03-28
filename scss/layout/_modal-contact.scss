@@ -1,5 +1,5 @@
 .modal-contact {
-  // display: block;
+  display: block;
 }
 
 .contact {
@@ -11,8 +11,9 @@
     background-color: mediumaquamarine;
     width: 450px;
     height: 98%;
-    padding: 40px;
+    padding: 50px 45px;
     border-radius: 0 25px 25px 0;
+    box-shadow: 2px 4px 8px rgba($color-black, 0.25);
   }
 
   &__text-area {
@@ -21,19 +22,22 @@
 
   &__main-text {
     display: block;
-    margin-bottom: 8px;
-    font-size: 28px;
+    margin-bottom: 13px;
+    font-family: 'Della Respira', serif;
+    font-size: 30px;
+    font-weight: 500;
     letter-spacing: -1.5px;
   }
 
   &__sub-text {
     // color: #ccc;
+    padding-left: 2px;
+    font-size: 15px;
   }
 
   &__list {
-    position: absolute;
-    top: 42%;
-    left: 40px;
+    padding-left: 8px;
+    margin-top: 100px;
 
     &-item {
       display: flex;
@@ -43,8 +47,13 @@
   }
 
   &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 23px;
     margin-right: 10px;
-    // font-size: 20px;
+    font-size: 17px;
   }
 
   &__text {

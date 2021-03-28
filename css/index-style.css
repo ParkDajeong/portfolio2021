@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* =========== Font - Della Respira =========== */
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&display=swap");
 /* =========== Font - 스포카 한 산스 네오 =========== */
 @font-face {
   font-family: "Spoqa Han Sans Neo";
@@ -743,9 +745,6 @@
 }
 
 /* =========== Modal - Project =========== */
-.modal-project {
-  display: block;
-}
 .modal-project .modal__inner {
   display: block;
 }
@@ -1194,6 +1193,10 @@
   color: #2f70da;
 }
 
+.modal-contact {
+  display: block;
+}
+
 .contact {
   display: flex;
   align-items: center;
@@ -1203,22 +1206,28 @@
   background-color: mediumaquamarine;
   width: 450px;
   height: 98%;
-  padding: 40px;
+  padding: 50px 45px;
   border-radius: 0 25px 25px 0;
+  box-shadow: 2px 4px 8px rgba(34, 34, 34, 0.25);
 }
 .contact__text-area {
   margin-top: 10px;
 }
 .contact__main-text {
   display: block;
-  margin-bottom: 8px;
-  font-size: 28px;
+  margin-bottom: 13px;
+  font-family: "Della Respira", serif;
+  font-size: 30px;
+  font-weight: 500;
   letter-spacing: -1.5px;
 }
+.contact__sub-text {
+  padding-left: 2px;
+  font-size: 15px;
+}
 .contact__list {
-  position: absolute;
-  top: 42%;
-  left: 40px;
+  padding-left: 8px;
+  margin-top: 100px;
 }
 .contact__list-item {
   display: flex;
@@ -1226,7 +1235,13 @@
   margin-bottom: 20px;
 }
 .contact__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23px;
+  height: 23px;
   margin-right: 10px;
+  font-size: 17px;
 }
 .contact__text {
   font-size: 18px;
