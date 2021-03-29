@@ -1,0 +1,203 @@
+.modal-contact {
+  display: block;
+}
+
+.contact {
+  background: url(../../assets/contact_bg.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  font-family: "Nanum Seongsil", serif;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+
+  &__left {
+    // background-color: rgba(blue, 0.1);
+    flex: 1;
+    height: 100%;
+  }
+
+  &__email-form {
+    margin-top: 90px;
+    margin-left: 48px;
+    width: 85%;
+  }
+
+  &__text-area {
+    margin-top: 28px;
+  }
+
+  &__main-text {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 36px;
+  }
+
+  &__sub-text {
+    padding-left: 2px;
+    font-size: 22px;
+
+    em {
+      display: block;
+      margin-top: 6px;
+      color: #80665c;
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 46%;
+    left: 55px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      line-height: 2.3;
+    }
+  }
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 23px;
+    // height: 23px;
+    margin-right: 15px;
+    font-size: 25px;
+  }
+
+  &__text {
+    font-size: 23px;
+  }
+
+  &__right {
+    // background-color: rgba($color-black, 0.1);
+    position: relative;
+    width: 45%;
+    height: 100%;
+    padding: 50px 42px;
+  }
+
+  /* ====== 메일 전송 모션관련 ====== */
+  &__date {
+    background-color: rgba(blue, 0.2);
+    position: absolute;
+    left: 50px;
+    bottom: 48px;
+    width: 210px;
+    height: 90px;
+
+    &-top {
+      background-color: rgba(green, 0.2);
+      position: relative;
+      height: 35px;
+      font-size: 18px;
+
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &.year {
+          right: 56%;
+        }
+  
+        &.month {
+          right: 33%;
+        }
+  
+        &.day {
+          right: 10%;
+        }
+      }
+    }
+
+    &-bottom {
+      background-color: rgba(darkred, 0.2);
+      position: relative;
+      height: calc(100% - 35px);
+
+      .yoil {
+        // background: url(../../assets/check_motion.gif) no-repeat;
+        // background-size: contain;
+        position: absolute;
+        top: 8px;
+        width: 42px;
+        height: 20px;
+        border: 2px solid darkred;
+        border-radius: 50%;
+
+        &.mon {
+          left: 3%;
+        }
+
+        &.tue {
+          left: 22%;
+        }
+
+        &.wed {
+          left: 42%;
+        }
+
+        &.thu {
+          left: 60%;
+        }
+
+        &.fri {
+          left: 80%;
+        }
+
+        &.sat {
+          top: 50%;
+          left: 9%;
+        }
+
+        &.sun {
+          top: 50%;
+          left: 28%;
+        }
+      }
+    }
+  }
+}
+
+.email-form {
+  label {
+    font-size: 20px;
+  }
+
+  &__input {
+    background-color: transparent;
+    display: block;
+    width: 96%;
+    padding: 10px;
+    margin: 0 0 12px 5px;
+    font-family: "Nanum point", serif;
+    font-size: 22px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(#b7a198, 0.9);
+  }
+
+  &__message {
+    height: 200px;
+    padding: 18px 20px;
+  }
+
+  &__btn-send {
+    background-color: rgba(cadetblue, 0.5);
+    position: absolute;
+    top: 5px;
+    right: 63px;
+    padding: 13px;
+    margin-top: 20px;
+    margin-left: auto;
+    width: 120px;
+    height: 150px;
+    font-size: 16px;
+    z-index: 1;
+  }
+}

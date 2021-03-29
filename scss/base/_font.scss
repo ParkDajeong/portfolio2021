@@ -53,21 +53,3 @@
   font-weight: normal;
   font-style: normal;
 }
-
-/* =========== Font - 나눔손글씨 성실체 =========== */
-@font-face {
-  font-family: "Nanum Seongsil";
-  src: local("Nanum SeongsirCe"), url(../../fonts/hello/Nanumsongeulssi_Seongsil.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Nanum chear up";
-  src: local("Nanum SeongsirCe"), url(../../fonts/hello/chear_up.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Nanum point";
-  src: local("Nanum SeongsirCe"), url(../../fonts/hello/point.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Nanum student";
-  src: local("Nanum SeongsirCe"), url(../../fonts/hello/student.ttf) format("truetype");
-}

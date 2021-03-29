@@ -346,73 +346,74 @@
         </div>
         <div class="contact modal__contents">
           <div class="contact__left">
-            <form action="" class="email-form contact__email-form" autocomplete="off">
-              <label for="name">보내는 사람</label>
-              <input type="text" name="name" id="name" class="email-form__input" placeholder="ex) 다정회사">
-              <label for="email">주소</label>
-              <input type="text" name="email" id="email" class="email-form__input" placeholder="ex) djpark@hello.com">
-              <label for="email">메세지</label>
-              <textarea name="message" id="message" class="email-form__input email-form__message" placeholder="내용을 입력해주세요:)"></textarea>
-              <button class="email-form__btn-send">메세지 전송</button>
-            </form>
-          </div>
-          <div class="contact__right">
             <div class="contact__text-area">
-              <strong class="contact__main-text">Send Mail</strong>
+              <strong class="contact__main-text">Let's Talk!</strong>
               <p class="contact__sub-text">
                 준비된 신입 웹 퍼블리셔 박다정입니다.<br>
-                기다리고 있으니, 언제든지 편히 연락 부탁드립니다!
-                <em>
-                  ps. 동작만 구현했으니, 마음껏 눌러보고 확인하셔도 괜찮습니다:)
-                </em>
+                기다리고 있으니, 언제든지 편하게 연락 부탁드립니다.<br>
+                좋은 인연이 되길 바라봅니다 🍀
               </p>
             </div>
             <dl class="contact__list">
-              <div class="contact__list-item">
-                <dt class="contact__name">
-                  <!-- <i class="fas fa-mobile-alt"></i> -->
-                  받는 사람.
-                </dt>
-                <dd class="contact__text">
-                  박다정
-                </dd>
-              </div>
-              <div class="contact__list-item">
-                <dt class="contact__name">
-                  <!-- <i class="far fa-envelope"></i> -->
-                  주소.
-                </dt>
-                <dd class="contact__text">
-                  <a href="mailto:yswk0901@gmail.com" class="contact__link">yswk0901@gmail.com</a>
-                </dd>
-              </div>
-              <div class="contact__list-item">
-                <dt class="contact__name">
-                  <!-- <i class="far fa-comment-dots"></i> -->
-                  연락처.
+              <div class="contact__list-item tel">
+                <dt class="contact__icon">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span class="blind">전화번호</span>
                 </dt>
                 <dd class="contact__text">
                   <a href="tel:010-8324-6601" class="contact__link">010-8324-6601</a>
+                  <span class="contact__link-tooltip tel">전화 걸기</span>
+                </dd>
+              </div>
+              <div class="contact__list-item mail">
+                <dt class="contact__icon">
+                  <i class="fas fa-at"></i>
+                  <span class="blind">이메일</span>
+                </dt>
+                <dd class="contact__text">
+                  <a href="mailto:yswk0901@gmail.com" class="contact__link">yswk0901@gmail.com</a>
+                  <span class="contact__link-tooltip mail">메일 보내기</span>
+                </dd>
+              </div>
+              <div class="contact__list-item location">
+                <dt class="contact__icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="blind">주소</span>
+                </dt>
+                <dd class="contact__text">
+                  경기도 성남시
+                  <span class="contact__link-tooltip location">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50712.908282916265!2d127.10593063644951!3d37.40031302192844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca7f1701220bf%3A0x50315666bce397d4!2z6rK96riw64-EIOyEseuCqOyLnA!5e0!3m2!1sko!2skr!4v1617014231404!5m2!1sko!2skr" width="210" height="215" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </span>
                 </dd>
               </div>
             </dl>
           </div>
-          <!-- 메일 전송 모션관련 -->
-          <div class="contact__date">
-            <div class="contact__date-top">
-              <span class="year">2021</span>
-              <span class="month">03</span>
-              <span class="day">29</span>
-            </div>
-            <div class="contact__date-bottom">
-              <span class="yoil mon"></span>
-              <span class="yoil tue"></span>
-              <span class="yoil wed"></span>
-              <span class="yoil thu"></span>
-              <span class="yoil fri"></span>
-              <span class="yoil sat"></span>
-              <span class="yoil sun"></span>
-            </div>
+          <div class="contact__right">
+            <form action="" class="email-form contact__email-form" autocomplete="off">
+              <label for="name">보내는 사람</label>
+              <div class="email-form__box">
+                <input type="text" name="name" id="name" class="email-form__input">
+                <svg class="email-form__focus-border">
+                  <rect width="100%" height="100%" rx="22" ry="22"></rect>
+                </svg>
+              </div>
+              <label for="email">이메일 주소</label>
+              <div class="email-form__box">
+                <input type="email" name="email" id="email" class="email-form__input">
+                <svg class="email-form__focus-border">
+                  <rect width="100%" height="100%" rx="22" ry="22"></rect>
+                </svg>
+              </div>
+              <label for="message">메세지</label>
+              <div class="email-form__box">
+                <textarea name="message" id="message" class="email-form__input email-form__message" placeholder="내용을 입력해주세요:)"></textarea>
+                <svg class="email-form__focus-border">
+                  <rect rx="30" ry="30"></rect>
+                </svg>
+              </div>
+              <button class="email-form__btn-send">메일 보내기</button>
+            </form>
           </div>
         </div>
       </div>

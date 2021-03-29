@@ -165,4 +165,14 @@ $(function() {
       $(".bookmark").removeClass("bookmark--list");
     }
   });
+
+  // Modal Contact - input focus
+  $(".email-form__input").on("focus", function() {
+    const name = $(this).attr("id");
+    $(`label[for=${name}]`).addClass("on");
+  });
+
+  $(".email-form__input").on("focusout", function() {
+    $(".email-form label").removeClass("on");
+  });
 });
