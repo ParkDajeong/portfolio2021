@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/* =========== Font - Della Respira =========== */
-@import url("https://fonts.googleapis.com/css2?family=Della+Respira&display=swap");
 /* =========== Font - 스포카 한 산스 네오 =========== */
 @font-face {
   font-family: "Spoqa Han Sans Neo";
@@ -39,6 +37,23 @@
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+/* =========== Font - 나눔손글씨 성실체 =========== */
+@font-face {
+  font-family: "Nanum Seongsil";
+  src: local("Nanum SeongsirCe"), url(../../fonts/hello/Nanumsongeulssi_Seongsil.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Nanum chear up";
+  src: local("Nanum SeongsirCe"), url(../../fonts/hello/chear_up.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Nanum point";
+  src: local("Nanum SeongsirCe"), url(../../fonts/hello/point.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Nanum student";
+  src: local("Nanum SeongsirCe"), url(../../fonts/hello/student.ttf) format("truetype");
 }
 /* =========== 애니메이션 =========== */
 @-webkit-keyframes loading {
@@ -1198,95 +1213,166 @@
 }
 
 .contact {
+  background: url(../../assets/contact_bg.jpg) no-repeat center;
+  background-size: cover;
   display: flex;
   align-items: center;
   padding-top: 35px;
+  font-family: "Nanum Seongsil", serif;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  /* ====== 메일 전송 모션관련 ====== */
 }
 .contact__left {
-  background-color: mediumaquamarine;
-  width: 450px;
-  height: 98%;
-  padding: 50px 45px;
-  border-radius: 0 25px 25px 0;
-  box-shadow: 2px 4px 8px rgba(34, 34, 34, 0.25);
-}
-.contact__text-area {
-  margin-top: 10px;
-}
-.contact__main-text {
-  display: block;
-  margin-bottom: 13px;
-  font-family: "Della Respira", serif;
-  font-size: 30px;
-  font-weight: 500;
-  letter-spacing: -1.5px;
-}
-.contact__sub-text {
-  padding-left: 2px;
-  font-size: 15px;
-}
-.contact__list {
-  padding-left: 8px;
-  margin-top: 100px;
-}
-.contact__list-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.contact__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 23px;
-  height: 23px;
-  margin-right: 10px;
-  font-size: 17px;
-}
-.contact__text {
-  font-size: 18px;
-}
-.contact__right {
-  position: relative;
   flex: 1;
   height: 100%;
 }
 .contact__email-form {
+  margin-top: 90px;
+  margin-left: 48px;
+  width: 85%;
+}
+.contact__text-area {
+  margin-top: 28px;
+}
+.contact__main-text {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 36px;
+}
+.contact__sub-text {
+  padding-left: 2px;
+  font-size: 22px;
+}
+.contact__sub-text em {
+  display: block;
+  margin-top: 6px;
+  color: #80665c;
+  font-size: 20px;
+}
+.contact__list {
+  position: absolute;
+  top: 46%;
+  left: 55px;
+}
+.contact__list-item {
+  display: flex;
+  align-items: center;
+  line-height: 2.3;
+}
+.contact__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.contact__text {
+  font-size: 23px;
+}
+.contact__right {
+  position: relative;
+  width: 45%;
+  height: 100%;
+  padding: 50px 42px;
+}
+.contact__date {
+  background-color: rgba(0, 0, 255, 0.2);
+  position: absolute;
+  left: 50px;
+  bottom: 48px;
+  width: 210px;
+  height: 90px;
+}
+.contact__date-top {
+  background-color: rgba(0, 128, 0, 0.2);
+  position: relative;
+  height: 35px;
+  font-size: 18px;
+}
+.contact__date-top span {
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 85%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+}
+.contact__date-top span.year {
+  right: 56%;
+}
+.contact__date-top span.month {
+  right: 33%;
+}
+.contact__date-top span.day {
+  right: 10%;
+}
+.contact__date-bottom {
+  background-color: rgba(139, 0, 0, 0.2);
+  position: relative;
+  height: calc(100% - 35px);
+}
+.contact__date-bottom .yoil {
+  position: absolute;
+  top: 8px;
+  width: 42px;
+  height: 20px;
+  border: 2px solid darkred;
+  border-radius: 50%;
+}
+.contact__date-bottom .yoil.mon {
+  left: 3%;
+}
+.contact__date-bottom .yoil.tue {
+  left: 22%;
+}
+.contact__date-bottom .yoil.wed {
+  left: 42%;
+}
+.contact__date-bottom .yoil.thu {
+  left: 60%;
+}
+.contact__date-bottom .yoil.fri {
+  left: 80%;
+}
+.contact__date-bottom .yoil.sat {
+  top: 50%;
+  left: 9%;
+}
+.contact__date-bottom .yoil.sun {
+  top: 50%;
+  left: 28%;
 }
 
 .email-form label {
-  font-size: 15px;
+  font-size: 20px;
 }
 .email-form__input {
-  background-color: #edf0f9;
+  background-color: transparent;
   display: block;
-  width: 100%;
-  padding: 13px 20px;
-  margin-bottom: 10px;
-  font-size: 15px;
+  width: 96%;
+  padding: 10px;
+  margin: 0 0 12px 5px;
+  font-family: "Nanum point", serif;
+  font-size: 22px;
+  font-weight: bold;
   outline: none;
   border: none;
-  border-radius: 50px;
+  border-bottom: 2px solid rgba(183, 161, 152, 0.9);
 }
 .email-form__message {
   height: 200px;
   padding: 18px 20px;
-  border-radius: 30px;
 }
 .email-form__btn-send {
-  background-color: cadetblue;
-  display: block;
+  background-color: rgba(95, 158, 160, 0.5);
+  position: absolute;
+  top: 5px;
+  right: 63px;
   padding: 13px;
   margin-top: 20px;
   margin-left: auto;
-  width: 180px;
+  width: 120px;
+  height: 150px;
   font-size: 16px;
-  border-radius: 100px;
+  z-index: 1;
 }
 
 .modal-info .modal__content-section {

@@ -346,50 +346,73 @@
         </div>
         <div class="contact modal__contents">
           <div class="contact__left">
+            <form action="" class="email-form contact__email-form" autocomplete="off">
+              <label for="name">보내는 사람</label>
+              <input type="text" name="name" id="name" class="email-form__input" placeholder="ex) 다정회사">
+              <label for="email">주소</label>
+              <input type="text" name="email" id="email" class="email-form__input" placeholder="ex) djpark@hello.com">
+              <label for="email">메세지</label>
+              <textarea name="message" id="message" class="email-form__input email-form__message" placeholder="내용을 입력해주세요:)"></textarea>
+              <button class="email-form__btn-send">메세지 전송</button>
+            </form>
+          </div>
+          <div class="contact__right">
             <div class="contact__text-area">
-              <strong class="contact__main-text">Let's Talk!</strong>
+              <strong class="contact__main-text">Send Mail</strong>
               <p class="contact__sub-text">
                 준비된 신입 웹 퍼블리셔 박다정입니다.<br>
                 기다리고 있으니, 언제든지 편히 연락 부탁드립니다!
+                <em>
+                  ps. 동작만 구현했으니, 마음껏 눌러보고 확인하셔도 괜찮습니다:)
+                </em>
               </p>
             </div>
             <dl class="contact__list">
               <div class="contact__list-item">
-                <dt class="contact__icon">
-                  <i class="fas fa-mobile-alt"></i>
+                <dt class="contact__name">
+                  <!-- <i class="fas fa-mobile-alt"></i> -->
+                  받는 사람.
                 </dt>
                 <dd class="contact__text">
-                  <a href="tel:010-8324-6601" class="contact__link">010-8324-6601</a>
+                  박다정
                 </dd>
               </div>
               <div class="contact__list-item">
-                <dt class="contact__icon">
-                  <i class="far fa-envelope"></i>
+                <dt class="contact__name">
+                  <!-- <i class="far fa-envelope"></i> -->
+                  주소.
                 </dt>
                 <dd class="contact__text">
                   <a href="mailto:yswk0901@gmail.com" class="contact__link">yswk0901@gmail.com</a>
                 </dd>
               </div>
               <div class="contact__list-item">
-                <dt class="contact__icon">
-                  <i class="far fa-comment-dots"></i>
+                <dt class="contact__name">
+                  <!-- <i class="far fa-comment-dots"></i> -->
+                  연락처.
                 </dt>
                 <dd class="contact__text">
-                  010-8324-6601
+                  <a href="tel:010-8324-6601" class="contact__link">010-8324-6601</a>
                 </dd>
               </div>
             </dl>
           </div>
-          <div class="contact__right">
-            <form action="" class="email-form contact__email-form">
-              <label for="name">보내는 사람</label>
-              <input type="text" name="name" id="name" class="email-form__input">
-              <label for="email">이메일 주소</label>
-              <input type="text" name="email" id="email" class="email-form__input">
-              <label for="email">메세지</label>
-              <textarea name="message" id="message" class="email-form__input email-form__message" placeholder="내용을 입력해주세요:)"></textarea>
-              <button class="email-form__btn-send">메세지 전송</button>
-            </form>
+          <!-- 메일 전송 모션관련 -->
+          <div class="contact__date">
+            <div class="contact__date-top">
+              <span class="year">2021</span>
+              <span class="month">03</span>
+              <span class="day">29</span>
+            </div>
+            <div class="contact__date-bottom">
+              <span class="yoil mon"></span>
+              <span class="yoil tue"></span>
+              <span class="yoil wed"></span>
+              <span class="yoil thu"></span>
+              <span class="yoil fri"></span>
+              <span class="yoil sat"></span>
+              <span class="yoil sun"></span>
+            </div>
           </div>
         </div>
       </div>
